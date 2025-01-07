@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "icon": "/img/logo.svg",
+    "description": "A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces."
+  },
+  {
+    "id": 2,
+    "name": "TypeScript",
+    "icon": "/img/me.png",
+    "description": "A strongly typed programming language that builds on JavaScript.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces."
+  },
+  {
+    "id": 3,
+    "name": "Node.js",
+    "icon": "/img/me.png",
+    "description": "A runtime environment for executing JavaScript code server-side."
+  }
+]
