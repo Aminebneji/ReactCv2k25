@@ -1,0 +1,67 @@
+[
+  {
+  "date": "Diplôme",
+  "image": "/img/diplôme.png",
+  "title": "Concepteur Développeur d'application ",
+  "description": "Alors là c'est le suspense"
+},{
+    "date": "11/2023 - 12/2024",
+    "image": "/img/dpp.png",
+    "title": "M6DigitalServices - Digital Prisma Player",
+    "description": "Perfectionnement sur la technique let's go mais tout le monde se fait virer omg"
+  },{
+    "date": "Diplôme",
+    "image": "/img/diplôme.png",
+    "title": "Développeur Web Web Mobile",
+    "description": "Lors d'une soutenance, avec un projet réalisé par mes soins j'ai obtenu mon diplôme Développeur Web Web Mobile"
+  },
+  {
+    "date": "02/2022 - 11/2023",
+    "image": "/img/cerise.png",
+    "title": "Groupe Cerise",
+    "description": "Premiers pas dans le monde de l'entreprise en tant que Développeur, j'ai pus apprendre à m'intégrer et a appréhender machin machin"
+  },{
+    "date": "10/2022 - 02/2022",
+    "image": "/img/wf3.png",
+    "title": "WebForce 3",
+    "description": "Une formation axée sur les bases de la programmation et sur les technologies PHP, Symfony et Angular."
+  },
+  {
+    "date": "01/2022 - 04/2022",
+    "image": "/img/Aston.png",
+    "title": "Aston Ecole",
+    "description": "La deuxième partie d'une Formation Invest in Digital Pepole de Pole Emploi..."
+  },
+  {
+    "date": "projet",
+    "image": "/img/filRougeAston.png",
+    "title": "Gamin' home",
+    "description": "Une application Web supportée par Angular, C# .NET. Le site d'un cyber café imaginaire.",
+    "link": "https://github.com/Aminebneji/cyber_april"
+  },
+  {
+    "date": "11/2021 - 01/2022",
+    "image": "/img/simplon.png",
+    "title": "Simplon",
+    "description": "La première partie d'une Formation Invest in Digital Pepole de Pole Emploi..."
+  },
+  {
+    "date": "projet",
+    "image": "/img/JDRsimplon.jpg",
+    "title": "JdR Simplon",
+    "description": "Humblement nommé, une application Web de groupe en HTML CSS JS natif...",
+    "link": "https://github.com/Aminebneji/jdr-simplon"
+  },
+  {
+    "date": "04/2022 - 10/2022",
+    "image": "/img/sticker-hein.png",
+    "title": "Commis de Cuisine",
+    "description": "Commis de cuisine dans le restaurant de Brique House : le HEIN."
+  },
+  {
+    "date": "08/2021 - 11/2021",
+    "image": "/img/BriqueHouse.png",
+    "title": "Runner polyvalent",
+    "description": "Runner polyvalent dans la taproom de Brique House à Saint André Lez Lille."
+  }
+]
