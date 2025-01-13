@@ -25,7 +25,7 @@ const SidebarComponent: React.FC = () => {
                     <p className="title">Développeur</p>
                 </div>
                 <button className="info-more-btn" onClick={toggleSidebar}>
-                    <span>{isExpanded ? "Hide Contacts" : "Show Contacts"}</span>
+                    <span>{isExpanded ? "Réduire" : "Voir plus"}</span>
                 </button>
             </div>
 

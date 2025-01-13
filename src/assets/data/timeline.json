@@ -1,67 +1,113 @@
 [
   {
-  "date": "Diplôme",
-  "image": "/img/diplôme.png",
-  "title": "Concepteur Développeur d'application ",
-  "description": "Alors là c'est le suspense"
-},{
+    "date": "Diplôme",
+    "image": "/img/diplôme.png",
+    "title": "Concepteur Développeur d'application ",
+    "description": "Alors là c'est le suspense",
+    "technologies": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
     "date": "11/2023 - 12/2024",
     "image": "/img/dpp.png",
     "title": "M6DigitalServices - Digital Prisma Player",
-    "description": "Perfectionnement sur la technique let's go mais tout le monde se fait virer omg"
-  },{
+    "description": "Perfectionnement sur la technique let's go mais tout le monde se fait virer omg",
+    "technologies": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "date": "projet",
+    "image": "/img/articleSourcing.png",
+    "title": "Article Sourcing",
+    "description": "Pour l'entreprise Digital Prisma Player, avec Nest et React j'ai développé une application Web qui permettait la récupération de données via des flux RSS et la génération d'articles via une IA générative. Cette application avait pour but de booster la productivité des rédacteurs de l'entreprise. J'ai pus présenter cette application lors d'une soutenance qui m'a permis d'obtenir mon diplôme de Concepteur Développeur d'Applications.",
+    "link": "",
+    "technologies": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
     "date": "Diplôme",
     "image": "/img/diplôme.png",
     "title": "Développeur Web Web Mobile",
-    "description": "Lors d'une soutenance, avec un projet réalisé par mes soins j'ai obtenu mon diplôme Développeur Web Web Mobile"
+    "description": "Lors d'une soutenance, avec un projet réalisé par mes soins j'ai obtenu mon diplôme Développeur Web Web Mobile",
+    "technologies": [
+      1,
+      2,
+      3
+    ]
   },
   {
     "date": "02/2022 - 11/2023",
     "image": "/img/cerise.png",
     "title": "Groupe Cerise",
-    "description": "Premiers pas dans le monde de l'entreprise en tant que Développeur, j'ai pus apprendre à m'intégrer et a appréhender machin machin"
-  },{
+    "description": "Premiers pas dans le monde de l'entreprise en tant que Développeur, j'ai pus apprendre à m'intégrer et a appréhender machin machin",
+    "technologies": [1, 2, 3]
+  },
+  {
+    "date": "projet",
+    "image": "/img/shoesRar.png",
+    "title": "Shoes.Rar",
+    "description": "Un site eCommerce, développé avec Symphony et présenté lors d'une soutenance afin d'obtenir mon diplôme Développeur Web Web Mobile",
+    "link": "https://github.com/Aminebneji/Shoes.RAR",
+    "technologies": [1, 2, 3]
+  },
+  {
     "date": "10/2022 - 02/2022",
     "image": "/img/wf3.png",
     "title": "WebForce 3",
-    "description": "Une formation axée sur les bases de la programmation et sur les technologies PHP, Symfony et Angular."
+    "description": "Une formation axée sur les bases de la programmation et sur les technologies PHP, Symfony et Angular.",
+    "technologies": [1, 2, 3]
   },
   {
     "date": "01/2022 - 04/2022",
     "image": "/img/Aston.png",
     "title": "Aston Ecole",
-    "description": "La deuxième partie d'une Formation Invest in Digital Pepole de Pole Emploi..."
+    "description": "La deuxième partie d'une Formation Invest in Digital Pepole de Pole Emploi...",
+    "technologies": [1, 2, 3]
   },
   {
     "date": "projet",
     "image": "/img/filRougeAston.png",
     "title": "Gamin' home",
     "description": "Une application Web supportée par Angular, C# .NET. Le site d'un cyber café imaginaire.",
-    "link": "https://github.com/Aminebneji/cyber_april"
+    "link": "https://github.com/Aminebneji/cyber_april",
+    "technologies": [1, 2, 3]
   },
   {
     "date": "11/2021 - 01/2022",
     "image": "/img/simplon.png",
     "title": "Simplon",
-    "description": "La première partie d'une Formation Invest in Digital Pepole de Pole Emploi..."
+    "description": "La première partie d'une Formation Invest in Digital Pepole de Pole Emploi...",
+    "technologies": [1, 2, 3]
   },
   {
     "date": "projet",
     "image": "/img/JDRsimplon.jpg",
     "title": "JdR Simplon",
     "description": "Humblement nommé, une application Web de groupe en HTML CSS JS natif...",
-    "link": "https://github.com/Aminebneji/jdr-simplon"
+    "link": "https://github.com/Aminebneji/jdr-simplon",
+    "technologies": [1, 2, 3]
   },
   {
     "date": "04/2022 - 10/2022",
     "image": "/img/sticker-hein.png",
     "title": "Commis de Cuisine",
-    "description": "Commis de cuisine dans le restaurant de Brique House : le HEIN."
+    "description": "Commis de cuisine dans le restaurant de Brique House : le HEIN.",
+    "technologies": [1, 2, 3]
   },
   {
     "date": "08/2021 - 11/2021",
     "image": "/img/BriqueHouse.png",
     "title": "Runner polyvalent",
-    "description": "Runner polyvalent dans la taproom de Brique House à Saint André Lez Lille."
+    "description": "Runner polyvalent dans la taproom de Brique House à Saint André Lez Lille.",
+    "technologies": [1, 2, 3]
   }
 ]

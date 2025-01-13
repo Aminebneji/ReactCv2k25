@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "../assets/styles/timeline.css";
 import timelineData from "../assets/data/timeline.json";
+import techData from "../assets/data/techno.json";
 
 interface TimelineItem {
+    technologies: number[] ;
     date: string;
     image: string;
     title: string;
     description: string;
     link?: string;
+}
+interface Tech {
+    id: number;
+    name: string;
+    icon: string;
+    description: string;
 }
 
 const Timeline: React.FC = () => {
@@ -41,7 +49,7 @@ const Timeline: React.FC = () => {
 
     return (
         <article>
-            <h2 className="h2 article-title">Experiences</h2>
+            <h2 className="h2 article-title">Parcours</h2>
             <div className="timeline">
                 <div className="timeline__vertical-line" />
 
@@ -61,16 +69,16 @@ const Timeline: React.FC = () => {
                         </div>
                         <div className="timeline__content">
                             <div className="timeline__info">
-                                    <img
-                                        className="timeline__img"
-                                        src={item.image}
-                                        alt={item.title}
-                                        style={{
-                                            maxWidth: "100px",
-                                            borderRadius: "12px",
-                                            objectFit: "cover",
-                                        }}
-                                    />
+                                <img
+                                    className="timeline__img"
+                                    src={item.image}
+                                    alt={item.title}
+                                    style={{
+                                        maxWidth: "100px",
+                                        borderRadius: "12px",
+                                        objectFit: "cover",
+                                    }}
+                                />
                                 <div className="timeline__details">
                                     <h3 className="timeline__name">{item.title}</h3>
                                 </div>
@@ -86,9 +94,34 @@ const Timeline: React.FC = () => {
                                     Voir le projet
                                 </a>
                             )}
+                            {item.technologies && (
+                                <div className="timeline__technologies">
+                                    {item.technologies.map((techId) => {
+                                        const tech = techData.find((tech) => tech.id === techId);
+                                        return tech ? (
+                                            <div key={tech.id} className="timeline__tech-item" style={{ textAlign: "center" }}>
+                                                <img
+                                                    src={tech.icon}
+                                                    alt={tech.name}
+                                                    title={tech.name}
+                                                    className="timeline__tech-icon"
+                                                    style={{
+                                                        width: "30px",
+                                                        height: "30px",
+                                                        margin: "5px",
+                                                        objectFit: "cover",
+                                                    }}
+                                                />
+                                                <span style={{ display: "block", fontSize: "12px" }}>{tech.name}</span>
+                                            </div>
+                                        ) : null;
+                                    })}
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}
+
             </div>
         </article>
     );

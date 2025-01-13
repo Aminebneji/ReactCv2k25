@@ -4,8 +4,6 @@
     position: relative;
 }
 
-
-/* Ligne verticale principale */
 .timeline__vertical-line {
     position: absolute;
     left: 10px;
@@ -118,7 +116,7 @@
 
 .timeline__marker-date {
     position: absolute;
-    left: 30px; /* Décalage pour la date */
+    left: 30px;
     font-size: var(--fs4);
     color: var(--orange-yellow-crayola);
     white-space: nowrap;
@@ -126,7 +124,6 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Style pour le marqueur actif */
 .timeline__marker--active {
     background-color: var(--orange-yellow-crayola);
     transform: scale(1.2);
@@ -138,6 +135,39 @@
     color: var(--white1);
 }
 
+.timeline__technologies {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timeline__tech-item {
+    display: flex;
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 7px;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--white1);
+    background: var(--onyx);
+    font-size: var(--fs8);
+    font-weight: var(--fw600);
+    width: max-content;
+}
+
+.timeline__tech-item span {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--white1) ;
+}
+
+.timeline__tech-item {
+    transition: transform 0.2s;
+}
+
+.timeline__tech-item:hover {
+    transform: scale(1.2);
+}
 
 @media (max-width: 1250px) and (min-width: 580px) {
     .timeline {
