@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 import '../assets/styles/contact.css';
 
 const ContactForm = () => {
@@ -8,6 +7,8 @@ const ContactForm = () => {
     const [isSubmitting, setSubmitting] = useState(false);
     const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
 
+
+    // on vérifie le champ pour s'assurer qu'il s'agit bien d'un email, pour le reste des champs le backend va faire le taf
     const validateEmail = (email: string) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
@@ -24,6 +25,7 @@ const ContactForm = () => {
         );
     };
 
+    // ici le but c'est de contraindre l'envoie d'un mail unique par utilisateur en utilisant le local storage
     const isSubmissionAllowed = (): boolean => {
         const lastSubmission = localStorage.getItem('lastSubmission');
         if (lastSubmission) {
@@ -36,9 +38,9 @@ const ContactForm = () => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const serviceId: string = process.env.REACT_APP_EMAILJS_SERVICE_ID ?? "";
-        const templateId: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID ?? "";
-        const userId: string = process.env.REACT_APP_EMAILJS_USER_ID ?? "";
+
+        // je vérifie la présence dans le local storage d'une éventuelle
+        // trace d'une requête, si c'est le cas je return sinon j'initie l'envoie du message par mail
 
         if (!isSubmissionAllowed()) {
             setFeedbackMessage('Vous envoyez trop de messages, laissez-lui le temps de lire le pauvre.');
@@ -48,23 +50,32 @@ const ContactForm = () => {
         setSubmitting(true);
         setFeedbackMessage(null);
 
+        //call au backend pour le mail (avec nodemailer)
+
         try {
-            const result = await emailjs.send(
-                serviceId,
-                templateId,
-                {
+            const response = await fetch('http://localhost:5000/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
                     message: formData.message,
-                },
-                userId
-            );
+                }),
+            });
 
-            console.log('Email envoyé avec succès:', result.text);
-            setFeedbackMessage('Votre message a été envoyé avec succès.');
-            localStorage.setItem('lastSubmission', Date.now().toString());
+            if (response.ok) {
+                setFeedbackMessage('Votre message a été envoyé avec succès.');
+                localStorage.setItem('lastSubmission', Date.now().toString());
+            }else if (response.status === 429) {
+                setFeedbackMessage("Bah alors ? t'as fait tomber ton local storage ?" );
+            } else {
+                const errorData = await response.json();
+                setFeedbackMessage(errorData.error || 'Une erreur est survenue.');
+            }
         } catch (error) {
-            console.error('Erreur lors de l’envoi de l’e-mail:', error);
+            console.error('Erreur lors de l’envoi du formulaire:', error);
             setFeedbackMessage('Une erreur est survenue.');
         } finally {
             setTimeout(() => {
@@ -73,6 +84,7 @@ const ContactForm = () => {
             }, 2000);
         }
     };
+
 
     return (
         <article>
