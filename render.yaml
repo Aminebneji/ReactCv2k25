@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: react-portfolio-backend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: EMAIL_USER
+        sync: true
+      - key: EMAIL_PASS
+        sync: true
+      - key: RECEIVER_EMAIL
+        sync: true
+    build:
+      path: .

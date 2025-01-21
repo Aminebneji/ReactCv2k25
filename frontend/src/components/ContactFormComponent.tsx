@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import '../assets/styles/contact.css';
+import dotenv from 'dotenv';
+
+dotenv.config()
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({name: '', email: '', message: ''});
@@ -52,7 +55,7 @@ const ContactForm = () => {
 
         //call au backend pour le mail (avec nodemailer)
         try {
-            const response: Response = await fetch('http://localhost:5000/api/send-email', {
+            const response: Response = await fetch(`${process.env.REACT_APP_API_URL}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

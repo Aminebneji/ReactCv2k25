@@ -7,11 +7,11 @@
     "backend"
   ],
   "scripts": {
-    "start:frontend": "npm --prefix frontend start",
-    "start:backend": "npm --prefix backend start",
     "build:frontend": "npm --prefix frontend run build",
     "build:backend": "npm --prefix backend run build",
-    "build": "npm run build:frontend && npm run build:backend"
+    "build:copy-frontend": "cp -r frontend/build backend/build",
+    "build": "npm run build:frontend && npm run build:copy-frontend && npm run build:backend",
+    "start": "npm --prefix backend start"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.0.0",
