@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import '../assets/styles/contact.css';
 
 const ContactForm = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [formData, setFormData] = useState({name: '', email: '', message: ''});
     const [isFormValid, setFormValid] = useState(false);
     const [isSubmitting, setSubmitting] = useState(false);
     const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
@@ -15,8 +15,8 @@ const ContactForm = () => {
     };
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = event.target;
-        setFormData((prevData) => ({ ...prevData, [name]: value }));
+        const {name, value} = event.target;
+        setFormData((prevData) => ({...prevData, [name]: value}));
 
         setFormValid(
             formData.name.trim() !== '' &&
@@ -27,10 +27,10 @@ const ContactForm = () => {
 
     // ici le but c'est de contraindre l'envoie d'un mail unique par utilisateur en utilisant le local storage
     const isSubmissionAllowed = (): boolean => {
-        const lastSubmission = localStorage.getItem('lastSubmission');
+        const lastSubmission: string | null = localStorage.getItem('lastSubmission');
         if (lastSubmission) {
-            const oneWeekInMs = 7 * 24 * 60 * 60 * 1000;
-            const timeElapsed = Date.now() - parseInt(lastSubmission, 10);
+            const oneWeekInMs: number = 7 * 24 * 60 * 60 * 1000;
+            const timeElapsed: number = Date.now() - parseInt(lastSubmission, 10);
             return timeElapsed > oneWeekInMs;
         }
         return true;
@@ -51,9 +51,8 @@ const ContactForm = () => {
         setFeedbackMessage(null);
 
         //call au backend pour le mail (avec nodemailer)
-
         try {
-            const response = await fetch('http://localhost:5000/api/send-email', {
+            const response: Response = await fetch('http://localhost:5000/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -68,8 +67,8 @@ const ContactForm = () => {
             if (response.ok) {
                 setFeedbackMessage('Votre message a été envoyé avec succès.');
                 localStorage.setItem('lastSubmission', Date.now().toString());
-            }else if (response.status === 429) {
-                setFeedbackMessage("Bah alors ? t'as fait tomber ton local storage ?" );
+            } else if (response.status === 429) {
+                setFeedbackMessage("Bah alors ? t'as fait tomber ton local storage ?");
             } else {
                 const errorData = await response.json();
                 setFeedbackMessage(errorData.error || 'Une erreur est survenue.');
@@ -80,7 +79,7 @@ const ContactForm = () => {
         } finally {
             setTimeout(() => {
                 setSubmitting(false);
-                setFormData({ name: '', email: '', message: '' });
+                setFormData({name: '', email: '', message: ''});
             }, 2000);
         }
     };

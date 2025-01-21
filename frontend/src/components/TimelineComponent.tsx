@@ -1,37 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import "../assets/styles/timeline.css";
 import timelineData from "../assets/data/timeline.json";
 import techData from "../assets/data/techno.json";
 
 interface TimelineItem {
-    technologies: number[] ;
+    technologies: number[];
     date: string;
     image: string;
     title: string;
     description: string;
     link?: string;
 }
-interface Tech {
-    id: number;
-    name: string;
-    icon: string;
-    description: string;
-}
 
 const Timeline: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     useEffect(() => {
-        const timelineItems = document.querySelectorAll(".timeline__item");
+        const timelineItems: NodeListOf<Element> = document.querySelectorAll(".timeline__item");
         const handleScroll = () => {
-            const offsets = Array.from(timelineItems).map(
-                (item) => (item as HTMLElement).offsetTop
+            const offsets: number[] = Array.from(timelineItems).map(
+                (item: Element) => (item as HTMLElement).offsetTop
             );
 
-            timelineItems.forEach((item, index) => {
-                const elementTop = offsets[index];
-                const nextElementTop = offsets[index + 1] || Infinity;
-                const windowScrollY = window.scrollY;
+            timelineItems.forEach((item: Element, index: number) => {
+                const elementTop: number = offsets[index];
+                const nextElementTop: number = offsets[index + 1] || Infinity;
+                const windowScrollY: number = window.scrollY;
 
                 if (
                     windowScrollY >= elementTop - 200 &&
@@ -42,7 +36,7 @@ const Timeline: React.FC = () => {
             });
         };
 
-        window.addEventListener("scroll", handleScroll, { passive: true });
+        window.addEventListener("scroll", handleScroll, {passive: true});
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
@@ -51,9 +45,9 @@ const Timeline: React.FC = () => {
         <article>
             <h2 className="h2 article-title">Parcours</h2>
             <div className="timeline">
-                <div className="timeline__vertical-line" />
+                <div className="timeline__vertical-line"/>
 
-                {timelineData.map((item: TimelineItem, index) => (
+                {timelineData.map((item: TimelineItem, index: number) => (
                     <div
                         key={index}
                         className={`timeline__item ${
@@ -99,20 +93,19 @@ const Timeline: React.FC = () => {
                                     {item.technologies.map((techId) => {
                                         const tech = techData.find((tech) => tech.id === techId);
                                         return tech ? (
-                                            <div key={tech.id} className="timeline__tech-item" style={{ textAlign: "center" }}>
+                                            <div key={tech.id} className="timeline__tech-item"
+                                                 style={{textAlign: "center"}}>
                                                 <img
                                                     src={tech.icon}
                                                     alt={tech.name}
                                                     title={tech.name}
                                                     className="timeline__tech-icon"
                                                     style={{
-                                                        width: "30px",
                                                         height: "30px",
                                                         margin: "5px",
                                                         objectFit: "cover",
                                                     }}
                                                 />
-                                                <span style={{ display: "block", fontSize: "12px" }}>{tech.name}</span>
                                             </div>
                                         ) : null;
                                     })}

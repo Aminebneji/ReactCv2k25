@@ -2,112 +2,136 @@
   {
     "date": "Diplôme",
     "image": "/img/diplôme.png",
-    "title": "Concepteur Développeur d'application ",
-    "description": "Alors là c'est le suspense",
-    "technologies": [
-      1,
-      2,
-      3
-    ]
+    "title": "Concepteur Développeur d'Applications",
+    "description": "Lors d'une soutenance, avec un projet que j'ai réalisé et documenté, j'ai obtenu mon diplôme de Concepteur Développeur d'Applications.",
+    "technologies": []
   },
   {
     "date": "11/2023 - 12/2024",
     "image": "/img/dpp.png",
-    "title": "M6DigitalServices - Digital Prisma Player",
-    "description": "Perfectionnement sur la technique let's go mais tout le monde se fait virer omg",
+    "title": "M6 Digital Services - Digital Prisma Player",
+    "description": "Après la fermeture du pôle informatique du Groupe Cerise et la reprise des projets par Digital Prisma Player, j'ai pu continuer à suivre les différentes tâches qui m'étaient attribuées.",
     "technologies": [
       1,
       2,
-      3
+      4,
+      6,
+      7,
+      5,
+      9,
+      10,
+      11
     ]
   },
   {
-    "date": "projet",
+    "date": "Projet",
     "image": "/img/articleSourcing.png",
     "title": "Article Sourcing",
-    "description": "Pour l'entreprise Digital Prisma Player, avec Nest et React j'ai développé une application Web qui permettait la récupération de données via des flux RSS et la génération d'articles via une IA générative. Cette application avait pour but de booster la productivité des rédacteurs de l'entreprise. J'ai pus présenter cette application lors d'une soutenance qui m'a permis d'obtenir mon diplôme de Concepteur Développeur d'Applications.",
+    "description": "Pour l'entreprise Digital Prisma Player, j'ai développé une application Web avec Nest.js et React. Elle permettait de récupérer des données via des flux RSS et de générer des articles grâce à une IA générative. Cette application avait pour objectif d'augmenter la productivité des rédacteurs de l'entreprise. J'ai présenté ce projet lors d'une soutenance, qui m'a permis d'obtenir mon diplôme de Concepteur Développeur d'Applications.",
     "link": "",
     "technologies": [
       1,
       2,
-      3
+      4,
+      6,
+      7,
+      9,
+      10
     ]
   },
   {
     "date": "Diplôme",
     "image": "/img/diplôme.png",
-    "title": "Développeur Web Web Mobile",
-    "description": "Lors d'une soutenance, avec un projet réalisé par mes soins j'ai obtenu mon diplôme Développeur Web Web Mobile",
-    "technologies": [
-      1,
-      2,
-      3
-    ]
+    "title": "Développeur Web et Web Mobile",
+    "description": "Lors d'une soutenance, avec un projet que j'ai réalisé et documenté, j'ai obtenu mon diplôme de Développeur Web et Web Mobile.",
+    "technologies": []
   },
   {
     "date": "02/2022 - 11/2023",
     "image": "/img/cerise.png",
     "title": "Groupe Cerise",
-    "description": "Premiers pas dans le monde de l'entreprise en tant que Développeur, j'ai pus apprendre à m'intégrer et a appréhender machin machin",
-    "technologies": [1, 2, 3]
+    "description": "Mes premiers pas en entreprise en tant que Développeur m'ont permis d'apprendre à appréhender ce métier. J'ai collaboré sur divers projets de l'entreprise. Du sprint planning à la mise en production, j'ai pu me former et développer mes compétences dans des situations concrètes. J'ai mis à jour des projets, créé des librairies utilisées par d'autres développeurs, intégré de nouvelles fonctionnalités aux différents sites de l'entreprise, suivi des POC, corrigé des bugs et documenté du code. J'ai découvert le travail en équipe via la méthode Scrum et ses cérémonies. J'ai également effectué des revues de code (code reviews) sur GitLab et, découvert la gestion des environnements de production avec GitLab, les CI/CD, Docker, Harbor, etc. Cette expérience enrichissante m'a permis de monter en compétences tout en confirmant mon attrait pour ce métier, consolidant mon envie de continuer.",
+    "technologies": [
+      1,
+      2,
+      3,
+      5,
+      8,
+      9,
+      10,
+      11
+    ]
   },
   {
-    "date": "projet",
+    "date": "Projet",
     "image": "/img/shoesRar.png",
     "title": "Shoes.Rar",
-    "description": "Un site eCommerce, développé avec Symphony et présenté lors d'une soutenance afin d'obtenir mon diplôme Développeur Web Web Mobile",
+    "description": "Un site e-commerce développé avec Symfony, documenté et présenté lors d'une soutenance pour obtenir mon diplôme de Développeur Web et Web Mobile.",
     "link": "https://github.com/Aminebneji/Shoes.RAR",
-    "technologies": [1, 2, 3]
+    "technologies": [
+      3,
+      4
+    ]
   },
   {
     "date": "10/2022 - 02/2022",
     "image": "/img/wf3.png",
     "title": "WebForce 3",
-    "description": "Une formation axée sur les bases de la programmation et sur les technologies PHP, Symfony et Angular.",
-    "technologies": [1, 2, 3]
+    "description": "Une formation axée sur les bases de la programmation et sur des technologies telles que PHP, Symfony et Angular. Un accent particulier était mis sur le développement Front-End. J'ai suivi cette formation en alternance.",
+    "technologies": []
+  },
+  {
+    "date": "Projet",
+    "image": "/img/filRougeAston.png",
+    "title": "Gamin' Home",
+    "description": "Une application Web construite avec Angular et C# .NET, représentant le site d'un cybercafé imaginaire.",
+    "link": "https://github.com/Aminebneji/cyber_april",
+    "technologies": [
+      1,
+      2,
+      12,
+      8,
+      9
+    ]
   },
   {
     "date": "01/2022 - 04/2022",
     "image": "/img/Aston.png",
-    "title": "Aston Ecole",
-    "description": "La deuxième partie d'une Formation Invest in Digital Pepole de Pole Emploi...",
-    "technologies": [1, 2, 3]
-  },
-  {
-    "date": "projet",
-    "image": "/img/filRougeAston.png",
-    "title": "Gamin' home",
-    "description": "Une application Web supportée par Angular, C# .NET. Le site d'un cyber café imaginaire.",
-    "link": "https://github.com/Aminebneji/cyber_april",
-    "technologies": [1, 2, 3]
+    "title": "Aston École",
+    "description": "La deuxième partie d'une préparation opérationnelle à l'emploi. J'y ai découvert la programmation orientée objet avec C# et le framework .NET, la manipulation de données, la création de bases de données et la gestion des environnements de production.",
+    "technologies": []
   },
   {
     "date": "11/2021 - 01/2022",
     "image": "/img/simplon.png",
     "title": "Simplon",
-    "description": "La première partie d'une Formation Invest in Digital Pepole de Pole Emploi...",
-    "technologies": [1, 2, 3]
+    "description": "La première partie d'une formation 'Invest in Digital People' de Pôle Emploi. Réalisée en collaboration avec Aston École, cette préparation opérationnelle à l'emploi m'a permis de découvrir les bases de la programmation, les frameworks, les algorithmes et Git.",
+    "technologies": []
   },
   {
-    "date": "projet",
+    "date": "Projet",
     "image": "/img/JDRsimplon.jpg",
     "title": "JdR Simplon",
-    "description": "Humblement nommé, une application Web de groupe en HTML CSS JS natif...",
+    "description": "Une application Web développée en HTML, CSS et JavaScript natif, permettant à l'utilisateur de décider de l'évolution d'une histoire en choisissant parmi plusieurs options à chaque événement.",
     "link": "https://github.com/Aminebneji/jdr-simplon",
-    "technologies": [1, 2, 3]
+    "technologies": [
+      1,
+      2,
+      9
+    ]
   },
   {
     "date": "04/2022 - 10/2022",
     "image": "/img/sticker-hein.png",
     "title": "Commis de Cuisine",
     "description": "Commis de cuisine dans le restaurant de Brique House : le HEIN.",
-    "technologies": [1, 2, 3]
+    "technologies": []
   },
   {
     "date": "08/2021 - 11/2021",
     "image": "/img/BriqueHouse.png",
     "title": "Runner polyvalent",
-    "description": "Runner polyvalent dans la taproom de Brique House à Saint André Lez Lille.",
-    "technologies": [1, 2, 3]
+    "description": "Runner polyvalent dans la taproom de Brique House à Saint-André-lez-Lille.",
+    "technologies": []
   }
 ]

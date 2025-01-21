@@ -33,10 +33,19 @@
 
 .technologies-icon-box {
     img{
+        /*
         background: var(--bg-gradient-onyx);
+        */
+        /*
         border-radius: 14px;
+        */
+        /*
         box-shadow: var(--shadow2);
+        */
         margin-right: 5%;
+        margin-left: 5%;
+        width: 5vh;
+        height: 3vh;
     }
     position: relative;
     margin-bottom: 15px;

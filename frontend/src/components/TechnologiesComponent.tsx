@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState, useEffect} from "react";
 import "../assets/styles/techno.css";
 
 interface Technology {
@@ -12,9 +12,17 @@ interface TechnologiesProps {
     technologies: Technology[];
 }
 
-const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
+const Technologies: React.FC<TechnologiesProps> = ({technologies}) => {
     const [modalActive, setModalActive] = useState(false);
     const [selectedTechnology, setSelectedTechnology] = useState<Technology | null>(null);
+
+    const MAX_DESCRIPTION_LENGTH = 25;
+
+    const truncateDescription = (description: string) => {
+        return description.length > MAX_DESCRIPTION_LENGTH
+            ? description.substring(0, MAX_DESCRIPTION_LENGTH) + "..."
+            : description;
+    };
 
     const openModal = (technology: Technology) => {
         setSelectedTechnology(technology);
@@ -26,6 +34,20 @@ const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
         setSelectedTechnology(null);
     };
 
+
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape" && modalActive) {
+                closeModal();
+            }
+        };
+
+        document.addEventListener("keydown", handleKeyDown);
+        return () => {
+            document.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [modalActive]);
+
     return (
         <section className="technologies">
             <h3 className="h3 technologies-title">Technologies</h3>
@@ -36,20 +58,23 @@ const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
                         <div
                             className="content-card"
                             onClick={() => openModal(technology)}
+                            role="button"
+                            tabIndex={0}
+                            aria-label={`View details about ${technology.name}`}
                         >
                             <figure className="technologies-icon-box">
-                                <img
-                                    src={technology.icon}
-                                    alt={`Icon of ${technology.name}`}
-                                    width="60"
-                                />
                                 <h4 className="h4 technologies-item-title">
                                     {technology.name}
                                 </h4>
+                                <img
+                                    src={technology.icon}
+                                    alt={`Icon representing ${technology.name}`}
+                                    loading="lazy"
+                                />
                             </figure>
 
                             <div className="technologies-text">
-                                <p>{technology.description}</p>
+                                <p>{truncateDescription(technology.description)}</p>
                             </div>
                         </div>
                     </li>
@@ -57,21 +82,35 @@ const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
             </ul>
 
             {modalActive && selectedTechnology && (
-                <div className="modal-container active">
-                    <div className="overlay active" onClick={closeModal}></div>
+                <div
+                    className="modal-container active"
+                    role="dialog"
+                    aria-labelledby="modal-title"
+                    aria-describedby="modal-description"
+                >
+                    <div className="overlay active" onClick={closeModal} aria-hidden="true"></div>
                     <div className="technologies-modal">
-                        <button className="modal-close-btn" onClick={closeModal}>
+                        <button
+                            className="modal-close-btn"
+                            onClick={closeModal}
+                            aria-label="Close modal"
+                        >
                             ✕
                         </button>
                         <div className="modal-icon-box">
                             <img
                                 src={selectedTechnology.icon}
-                                alt={`Icon of ${selectedTechnology.name}`}
+                                alt={`Icon representing ${selectedTechnology.name}`}
                                 width="80"
                             />
                         </div>
-                        <h4 className="modal-title">{selectedTechnology.name}</h4>
-                        <div className="modal-content">{selectedTechnology.description}</div>
+                        <h4 className="modal-title" id="modal-title">{selectedTechnology.name}</h4>
+                        <div
+                            className="modal-content"
+                            id="modal-description"
+                        >
+                            {selectedTechnology.description}
+                        </div>
                     </div>
                 </div>
             )}

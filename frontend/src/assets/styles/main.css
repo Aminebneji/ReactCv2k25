@@ -129,7 +129,7 @@ main {
 
 .avatar-box {
     background: var(--bg-gradient-onyx);
-    border-radius: 20px;
+    border-radius: 13px;
 }
 
 .info-content .name {
@@ -403,7 +403,7 @@ main {
 
     .sidebar-info { gap: 25px; }
 
-    .avatar-box { border-radius: 30px; }
+    .avatar-box { border-radius: 13px; }
     .avatar-box img { width: 120px; }
 
     .info-content .name { margin-bottom: 15px; }

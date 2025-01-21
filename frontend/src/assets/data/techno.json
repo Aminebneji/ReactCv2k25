@@ -1,45 +1,74 @@
 [
   {
     "id": 1,
-    "name": "React",
-    "icon": "/img/logo.svg",
-    "description": "A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces."
+    "name": "Node.js",
+    "icon": "/img/nodejs.svg",
+    "description": "En utilisant des langages comme TypeScript ou des frameworks comme Angular, j'ai découvert l'écosystème Node.js. Au-delà d'être un moteur d'exécution, j'ai pu explorer des outils comme NPM, les standards de développement liés à ECMAScript et des outils comme les linters. Node.js m'a permis de mieux comprendre l'importance de l'environnement de développement au-delà du code."
   },
   {
     "id": 2,
     "name": "TypeScript",
-    "icon": "/img/me.png",
-    "description": "A strongly typed programming language that builds on JavaScript.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces.A JavaScript library for building user interfaces."
+    "icon": "/img/typescript.svg",
+    "description": "J'ai rapidement adopté TypeScript dès mes débuts en développement. Ayant commencé avec des langages comme C#, le typage strict m'était familier. Des frameworks comme Angular m'ont permis de pratiquer TypeScript régulièrement et de m'y habituer."
   },
   {
     "id": 3,
-    "name": "Node.js",
-    "icon": "/img/me.png",
-    "description": "A runtime environment for executing JavaScript code server-side."
-  },  {
-  "id": 4,
-  "name": "Node.js",
-  "icon": "/img/me.png",
-  "description": "A runtime environment for executing JavaScript code server-side."
-},  {
-  "id": 5,
-  "name": "Node.js",
-  "icon": "/img/me.png",
-  "description": "A runtime environment for executing JavaScript code server-side."
-},  {
-  "id": 6,
-  "name": "Node.js",
-  "icon": "/img/me.png",
-  "description": "A runtime environment for executing JavaScript code server-side."
-},  {
-  "id": 7,
-  "name": "Node.js",
-  "icon": "/img/me.png",
-  "description": "A runtime environment for executing JavaScript code server-side."
-},  {
-  "id": 8,
-  "name": "Node.js",
-  "icon": "/img/me.png",
-  "description": "A runtime environment for executing JavaScript code server-side."
-}
+    "name": "PHP",
+    "icon": "/img/php.svg",
+    "description": "Je n'avais jamais travaillé avec PHP avant d'entrer chez Groupe Cerise. La majorité des sites de l'entreprise étaient construits avec un framework PHP. Pendant deux ans, j'ai analysé, créé et corrigé du code PHP. J'ai également créé un site e-commerce avec Symfony pour mon titre de Développeur Web et Web Mobile."
+  },
+  {
+    "id": 4,
+    "name": "MySQL",
+    "icon": "/img/mysql.svg",
+    "description": "J'ai souvent utilisé des ORM pour manipuler des bases de données relationnelles, mais je sais écrire des requêtes SQL à la main et concevoir des schémas de bases de données. Je maîtrise les concepts de conception relationnelle et l'optimisation des requêtes."
+  },
+  {
+    "id": 5,
+    "name": "MongoDB",
+    "icon": "/img/mongodb.svg",
+    "description": "Je n'avais jamais utilisé de bases de données non relationnelles avant de travailler dans un environnement professionnel. Avec MongoDB, j'ai découvert une manière différente de structurer et de manipuler les données, particulièrement utile pour des applications flexibles et scalables."
+  },
+  {
+    "id": 6,
+    "name": "Nest",
+    "icon": "/img/nest.svg",
+    "description": "Pour l'entreprise Digital Prisma Player, j'ai développé une API avec Nest. Cela m'a permis de découvrir le développement backend avec Node.js, en combinant des concepts de programmation orientée objet et des outils modernes."
+  },
+  {
+    "id": 7,
+    "name": "React",
+    "icon": "/img/react.svg",
+    "description": "J'ai découvert React lors d'un projet chez GroupeCerise où j'assistais un senior développeur frontend pour la typage TypeScript. Ensuite, j'ai développé l'interface d'un projet 'Article Sourcing' pour Digital Prisma Players. Ce site, d'ailleurs, est réalisé principalement avec React."
+  },
+  {
+    "id": 8,
+    "name": "Angular",
+    "icon": "/img/angular.svg",
+    "description": "Lors d'une formation (POEI), j'ai utilisé Angular avec TypeScript avant même de maîtriser complètement JavaScript. Plus tard, chez GroupeCerise, j'ai travaillé sur la mise à jour et la maintenance d'applications Angular, en passant de la version 12 à la version 17. Cela m'a aussi permis de corriger des configurations EsLint mal implémentées et de renforcer la sécurité et la lisibilité du code."
+  },
+  {
+    "id": 9,
+    "name": "Git et CI/CD",
+    "icon": "/img/git.svg",
+    "description": "J'ai utilisé Git dès mes débuts pour versionner mon code et collaborer sur des projets. En entreprise, j'ai exploré les pipelines CI/CD avec des fichiers YAML pour assurer des déploiements standards et automatisés, en incluant des tests et des vérifications."
+  },
+  {
+    "id": 10,
+    "name": "Docker",
+    "icon": "/img/docker.svg",
+    "description": "J'ai découvert Docker en entreprise, où il a simplifié l'installation des projets sur différents environnements de développement. J'ai également utilisé Docker pour des projets personnels, standardisant les configurations et réduisant les problèmes liés aux dépendances."
+  },
+  {
+    "id": 11,
+    "name": "Google Tag Manager",
+    "icon": "/img/gtm.svg",
+    "description": "Pour les sites de GroupeCerise, j'ai utilisé Google Tag Manager pour intégrer des flux RSS de podcasts via des embeds conditionnés. Cela a permis de simplifier la gestion de certaines logiques et de réduire la charge sur le site principal."
+  } ,
+  {
+    "id": 12,
+    "name": "C#",
+    "icon": "/img/cSharp.svg",
+    "description": "J'ai partiellement appris la programmation orientée objet avec C# sur le framework .NET. J'ai également exploré Unity de mon côté. Cela fait un moment que je n'ai pas pratiqué, mon niveau de connaissance sur cette technologie est alors probablement assez limité. Cependant, il est fort probable que je m'y remette un jour, d'autant plus que c'est un langage qui me plaît beaucoup."
+  }
 ]
