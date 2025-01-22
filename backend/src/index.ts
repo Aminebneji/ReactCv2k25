@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 const PORT: string = process.env.PORT || '5000';
 
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
 //rate limiter
@@ -30,7 +30,7 @@ app.use(limiter);
 // Validation des champs
 function validateFields(name: string, email: string, message: string): boolean {
     return (
-        validator.isLength(name, { min: 1, max: 50 }) &&
+        validator.isLength(name, { min: 1, max: 25 }) &&
         validator.isEmail(email) &&
         validator.isLength(message, { min: 1, max: 500 })
     );
@@ -39,7 +39,7 @@ function validateFields(name: string, email: string, message: string): boolean {
 // Vérifiction si email exist
 async function checkEmailExists(email: string): Promise<boolean> {
     // Simulez un appel ou ajoutez une API tierce pour valider réellement l'email
-    return validator.isEmail(email); // Remplacer par une vérification avancée si nécessaire
+    return validator.isEmail(email);
 }
 
 // Envoi email
@@ -67,25 +67,27 @@ async function sendEmail(
     await transporter.sendMail(mailOptions);
 }
 
-// Route
+// Route principale
+app.get('/', (req, res) => {
+    res.status(200).send('Bienvenue sur le backend !');
+});
+
+// Route mailer
 app.post('/api/send-email', limiter, async (req, res) => {
     const { name, email, message } = req.body;
 
-    // Validation des champs
     if (!validateFields(name, email, message)) {
         return res.status(400).json({ error: 'Les champs sont invalides.' });
     }
 
-    // Vérification de l'existence de l'email
-    const emailExists:boolean = await checkEmailExists(email);
+    const emailExists: boolean = await checkEmailExists(email);
     if (!emailExists) {
         return res.status(400).json({ error: "L'email fourni est invalide ou inexistant." });
     }
 
-    // Assainissement des données
-    const sanitizedName:string = validator.escape(name);
-    const sanitizedEmail:string = validator.normalizeEmail(email) || "";
-    const sanitizedMessage:string = validator.escape(message);
+    const sanitizedName: string = validator.escape(name);
+    const sanitizedEmail: string = validator.normalizeEmail(email) || '';
+    const sanitizedMessage: string = validator.escape(message);
 
     try {
         await sendEmail(sanitizedName, sanitizedEmail, sanitizedMessage);

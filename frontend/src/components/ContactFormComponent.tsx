@@ -91,7 +91,7 @@ const ContactForm = () => {
     return (
         <article>
             <form className="contact-form" onSubmit={handleSubmit}>
-                <h2 className="h2 article-title">Contacte</h2>
+                <h2 className="h2 article-title">Contact</h2>
                 <div className="input-wrapper">
                     <input
                         type="text"
