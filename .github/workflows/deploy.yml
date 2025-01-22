@@ -24,8 +24,12 @@ jobs:
       - name: Build application
         run: npm run build
 
+      - name: Install Render CLI
+        run: |
+          curl -fsSL https://cli.render.com/installer | bash
+          export PATH=$PATH:/home/runner/.render-cli/bin
+
       - name: Deploy to Render
         env:
-          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }} # Render API Key dans les secrets GitHub
-        run: curl https://cli.render.com/installer
-          render deploy
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+        run: render deploy
