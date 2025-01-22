@@ -88,7 +88,7 @@ const Technologies: React.FC<TechnologiesProps> = ({technologies}) => {
                     aria-labelledby="modal-title"
                     aria-describedby="modal-description"
                 >
-                    <div className="overlay active" onClick={closeModal} aria-hidden="true"></div>
+                    <div className="overlay active" onClick={closeModal}></div>
                     <div className="technologies-modal">
                         <button
                             className="modal-close-btn"

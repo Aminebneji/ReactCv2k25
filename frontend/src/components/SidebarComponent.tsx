@@ -49,10 +49,10 @@ const SidebarComponent: React.FC = () => {
                 role="region"
                 aria-hidden={!isExpanded}
             >
-                <div className="separator" aria-hidden="true"></div>
+                <div className="separator" ></div>
                 <ul className="contacts-list">
                     <li className="contact-item">
-                        <div className="icon-box" aria-hidden="true">
+                        <div className="icon-box" >
                             <EmailIcon/>
                         </div>
                         <div className="contact-info">
@@ -67,7 +67,7 @@ const SidebarComponent: React.FC = () => {
                         </div>
                     </li>
                     <li className="contact-item">
-                        <div className="icon-box" aria-hidden="true">
+                        <div className="icon-box">
                             <PhoneIcon/>
                         </div>
                         <div className="contact-info">
@@ -82,7 +82,7 @@ const SidebarComponent: React.FC = () => {
                         </div>
                     </li>
                     <li className="contact-item">
-                        <div className="icon-box" aria-hidden="true">
+                        <div className="icon-box" >
                             <LocationOnIcon/>
                         </div>
                         <div className="contact-info">
@@ -94,7 +94,7 @@ const SidebarComponent: React.FC = () => {
                     </li>
                 </ul>
 
-                <div className="separator" aria-hidden="true"></div>
+                <div className="separator"></div>
                 <nav aria-label="Liens vers les réseaux sociaux">
                     <ul className="social-list">
                         <li className="social-item">
@@ -110,7 +110,7 @@ const SidebarComponent: React.FC = () => {
                         </li>
                         <li className="social-item">
                             <a
-                                href="https://github.com/aminebenneji"
+                                href="https://github.com/Aminebneji"
                                 className="social-link"
                                 target="_blank"
                                 rel="noopener noreferrer"
