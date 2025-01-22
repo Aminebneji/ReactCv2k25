@@ -27,4 +27,5 @@ jobs:
       - name: Deploy to Render
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }} # Render API Key dans les secrets GitHub
-        run: render deploy
+        run: curl https://cli.render.com/installer
+          render deploy
