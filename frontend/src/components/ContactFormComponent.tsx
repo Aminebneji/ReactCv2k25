@@ -46,7 +46,7 @@ const ContactForm = () => {
         // trace d'une requête, si c'est le cas je return sinon j'initie l'envoie du message par mail
 
         if (!isSubmissionAllowed()) {
-            setFeedbackMessage('Vous envoyez trop de messages, laissez-lui le temps de lire le pauvre.');
+            setFeedbackMessage('Vous envoyez trop de messages');
             return;
         }
 
@@ -71,7 +71,7 @@ const ContactForm = () => {
                 setFeedbackMessage('Votre message a été envoyé avec succès.');
                 localStorage.setItem('lastSubmission', Date.now().toString());
             } else if (response.status === 429) {
-                setFeedbackMessage("Bah alors ? t'as fait tomber ton local storage ?");
+                setFeedbackMessage("encore trop de messages, désolé");
             } else {
                 const errorData = await response.json();
                 setFeedbackMessage(errorData.error || 'Une erreur est survenue.');
