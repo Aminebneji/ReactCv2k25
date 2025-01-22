@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 //rate limiter
 const limiter:RateLimitRequestHandler = rateLimit({
-    windowMs: 2 * 60 * 60 * 1000, // 2 heures
+    windowMs: 3 * 60 * 60 * 1000, // 2 heures
     max: 20,
     handler: (req, res) => {
         res.status(429).json({
