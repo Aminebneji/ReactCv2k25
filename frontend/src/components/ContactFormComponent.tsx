@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import '../assets/styles/contact.css';
-import dotenv from 'dotenv';
 
-dotenv.config()
+
+
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({name: '', email: '', message: ''});
