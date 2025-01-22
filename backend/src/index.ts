@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 //rate limiter
 const limiter:RateLimitRequestHandler = rateLimit({
     windowMs: 2 * 60 * 60 * 1000, // 2 heures
-    max: 3,
+    max: 5,
     handler: (req, res) => {
         res.status(429).json({
             error: "Trop de requêtes. Réessayez dans 2 heures.",
