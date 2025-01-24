@@ -16,7 +16,7 @@ const Technologies: React.FC<TechnologiesProps> = ({technologies}) => {
     const [modalActive, setModalActive] = useState(false);
     const [selectedTechnology, setSelectedTechnology] = useState<Technology | null>(null);
 
-    const MAX_DESCRIPTION_LENGTH = 25;
+    const MAX_DESCRIPTION_LENGTH = 35;
 
     const truncateDescription = (description: string) => {
         return description.length > MAX_DESCRIPTION_LENGTH

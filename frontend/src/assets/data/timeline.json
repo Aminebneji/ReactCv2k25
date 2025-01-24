@@ -3,14 +3,14 @@
     "date": "Diplôme",
     "image": "/img/diplôme.png",
     "title": "Concepteur Développeur d'Applications",
-    "description": "Lors d'une soutenance, avec un projet que j'ai réalisé et documenté, j'ai obtenu mon diplôme de Concepteur Développeur d'Applications.",
+    "description": "J'ai réalisé et documenté un projet présenté lors d'une soutenance pour l'obtention de mon diplôme de Concepteur Développeur d'Applications.",
     "technologies": []
   },
   {
     "date": "11/2023 - 12/2024",
     "image": "/img/dpp.png",
     "title": "M6 Digital Services - Digital Prisma Player",
-    "description": "Après la fermeture du pôle informatique du Groupe Cerise et la reprise des projets par Digital Prisma Player, j'ai pu continuer à suivre les différentes tâches qui m'étaient attribuées.",
+    "description": "Après la fermeture du pôle informatique du Groupe Cerise et la reprise des projets par Digital Prisma Player, j'ai poursuivi mes tâches tout en découvrant de nouveaux projets et infrastructures.",
     "technologies": [
       1,
       2,
@@ -43,14 +43,14 @@
     "date": "Diplôme",
     "image": "/img/diplôme.png",
     "title": "Développeur Web et Web Mobile",
-    "description": "Lors d'une soutenance, avec un projet que j'ai réalisé et documenté, j'ai obtenu mon diplôme de Développeur Web et Web Mobile.",
+    "description": "J'ai réalisé et documenté un projet présenté lors d'une soutenance pour l'obtention d'un diplôme demon diplôme de Développeur Web et Web Mobile.",
     "technologies": []
   },
   {
     "date": "02/2022 - 11/2023",
     "image": "/img/cerise.png",
     "title": "Groupe Cerise",
-    "description": "Mes premiers pas en entreprise en tant que Développeur m'ont permis d'apprendre à appréhender ce métier. J'ai  assuré la maintenance et le développement de features sur les sites et webservices proposés par l'entreprise. J'ai aussi eu l'occasions de mener des études techniques et documenter les différents projets afin d'aider l'équipe à diriger les développements futures. Le tout dans une gestion de projets Scrum sur une stack technique en PHP pour les sites principaux, avec MongoDB et GoogleTagManager. D'autres projets étaient sous Angular ou NodeJs avec Webpack. Nous utilisions aussi d'autres outils comme Gitlab, Harbord, Verdaccio ou Docker. Cette expérience enrichissante m'a permis de monter en compétences tout en confirmant mon attrait pour ce métier, consolidant mon envie de continuer.",
+    "description": "Mes débuts en tant que Développeur m'ont permis de découvrir et d'appréhender ce métier. J'ai assuré la maintenance et le développement de fonctionnalités pour les sites et webservices de l'entreprise, mené des études techniques et documenté les projets pour orienter les développements futurs. Le tout s'est déroulé dans un cadre Scrum, avec une stack technique principalement en PHP (sites principaux), MongoDB, GoogleTagManager, ainsi que des projets en Angular et Node.js avec Webpack. Nous utilisions également des outils comme GitLab, Harbord, Verdaccio et Docker. Cette expérience enrichissante a renforcé mes compétences et confirmé ma passion pour ce métier.",
     "technologies": [
       1,
       2,
@@ -131,7 +131,7 @@
     "date": "08/2021 - 11/2021",
     "image": "/img/BriqueHouse.png",
     "title": "Runner polyvalent",
-    "description": "Runner polyvalent dans la taproom de Brique House à Saint-André-lez-Lille.",
+    "description": "Runner polyvalent dans une taproom de Brique House à Saint-André-lez-Lille.",
     "technologies": []
   }
 ]

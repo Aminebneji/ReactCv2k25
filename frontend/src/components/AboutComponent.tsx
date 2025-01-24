@@ -11,10 +11,9 @@ const About: React.FC = () => {
             </header>
             <section className="about-text">
                 <p>
-                    Je suis un développeur en quête de nouvelles connaissances et d'évolution.
-                    Mon objectif est d'explorer une variété de projets pour continuer à progresser,
-                    aussi bien sur le plan technique que professionnel.
-                    Mes éxperiences passées ont confirmé mon attrait naturel pour le développement.
+                    Je suis un développeur qui aime apprendre et se dépasser en explorant des projets variés.
+                    Ce qui me motive, c’est de résoudre des problèmes, créer des solutions utiles et continuer à grandir dans ce que je fais.
+                    Les projets que j’explore me rendent plus solide à chaque étape, et c’est précisément ça qui me passionne.
                 </p>
             </section>
             <section className="techno">

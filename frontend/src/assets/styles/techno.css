@@ -163,3 +163,10 @@
         padding: 25px 30px 30px;
     }
 }
+
+@media (max-width: 1025px) {
+    .technologies-item-title { display: none}
+    .technologies-icon-box{
+        margin-left: 10%;
+    }
+}

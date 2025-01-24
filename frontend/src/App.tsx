@@ -40,7 +40,7 @@ const Navigation = () => {
                         className="navbar-link"
                         aria-current={location.pathname === "/contact" ? "page" : undefined}
                     >
-                        Contacts
+                        Contact
                     </Link>
                 </li>
             </ul>
