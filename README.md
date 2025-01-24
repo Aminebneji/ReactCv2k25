@@ -8,7 +8,7 @@ Ce dépôt contient le code source de mon portfolio personnel, développé avec 
 ## Aperçu
 
 Mon portfolio est là pour mettre en valeur mes compétences, projets et réalisations.  
-👉 [Lien vers le portfolio en ligne](https://amine-ben-neji-curriculum2k25.onrender.com/)
+👉 (https://amine-ben-neji-curriculum2k25.onrender.com/)
 
 ---
 
