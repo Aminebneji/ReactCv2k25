@@ -37,6 +37,7 @@ Suivez ces étapes pour exécuter le projet en local :
 ### Prérequis
 
 - [Node.js](https://nodejs.org/) installé
+- Un fichier .env ( 📕 suivez le .env.example )
   
 ### Étapes
 

@@ -9,6 +9,7 @@ node_modules/
 
 # Build directories
 frontend/build/
+backend/build/
 backend/dist/
 
 

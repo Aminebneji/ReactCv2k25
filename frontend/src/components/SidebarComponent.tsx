@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../assets/styles/sidebar.css";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -53,7 +53,7 @@ const SidebarComponent: React.FC = () => {
                 <ul className="contacts-list">
                     <li className="contact-item">
                         <div className="icon-box" >
-                            <EmailIcon/>
+                            <EmailIcon />
                         </div>
                         <div className="contact-info">
                             <p className="contact-title">Email</p>
@@ -68,7 +68,7 @@ const SidebarComponent: React.FC = () => {
                     </li>
                     <li className="contact-item">
                         <div className="icon-box">
-                            <PhoneIcon/>
+                            <PhoneIcon />
                         </div>
                         <div className="contact-info">
                             <p className="contact-title">Téléphone</p>
@@ -83,12 +83,12 @@ const SidebarComponent: React.FC = () => {
                     </li>
                     <li className="contact-item">
                         <div className="icon-box" >
-                            <LocationOnIcon/>
+                            <LocationOnIcon />
                         </div>
                         <div className="contact-info">
                             <p className="contact-title">Localisation</p>
                             <address aria-label="Adresse de localisation">
-                                LILLE, Nord, FRANCE
+                                MARSEILLE, FRANCE
                             </address>
                         </div>
                     </li>
@@ -105,7 +105,7 @@ const SidebarComponent: React.FC = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Visiter le profil LinkedIn d'Amine Benneji"
                             >
-                                <LinkedInIcon/>
+                                <LinkedInIcon />
                             </a>
                         </li>
                         <li className="social-item">
@@ -116,7 +116,7 @@ const SidebarComponent: React.FC = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Visiter le profil GitHub d'Amine Benneji"
                             >
-                                <GitHubIcon/>
+                                <GitHubIcon />
                             </a>
                         </li>
                     </ul>

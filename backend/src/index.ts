@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import rateLimit, {RateLimitRequestHandler} from 'express-rate-limit';
+import rateLimit, { RateLimitRequestHandler } from 'express-rate-limit';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import validator from 'validator';
@@ -16,7 +16,7 @@ app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
 //rate limiter
-const limiter:RateLimitRequestHandler = rateLimit({
+const limiter: RateLimitRequestHandler = rateLimit({
     windowMs: 2 * 60 * 60 * 1000, // 2 heures
     max: 10,
     handler: (req, res) => {
@@ -63,6 +63,7 @@ async function sendEmail(
         subject: `Nouveau message de ${name}`,
         text: `[ ${message} ] Recontacte par mail : ${email}`,
     };
+    console.log(name, email, message);
 
     await transporter.sendMail(mailOptions);
 }
@@ -75,7 +76,6 @@ app.get('/', (req, res) => {
 // Route mailer
 app.post('/api/send-email', limiter, async (req, res) => {
     const { name, email, message } = req.body;
-
     if (!validateFields(name, email, message)) {
         return res.status(400).json({ error: 'Les champs sont invalides.' });
     }
@@ -89,13 +89,11 @@ app.post('/api/send-email', limiter, async (req, res) => {
     const sanitizedEmail: string = validator.normalizeEmail(email) || '';
     const sanitizedMessage: string = validator.escape(message);
 
-    try {
-        await sendEmail(sanitizedName, sanitizedEmail, sanitizedMessage);
-        res.status(200).json({ message: 'Email envoyé avec succès.' });
-    } catch (error) {
-        console.error('Erreur lors de l’envoi de l’e-mail:', error);
-        res.status(500).json({ error: 'Une erreur est survenue. Réessayez plus tard.' });
-    }
+    res.status(202).json({ message: 'Votre message est en cours d\'envoi.' });
+
+    sendEmail(sanitizedName, sanitizedEmail, sanitizedMessage)
+        .then(() => console.log('✅ Email envoyé avec succès'))
+        .catch((error) => console.error('❌ Erreur lors de l’envoi de l’e-mail:', error));
 });
 
 app.listen(PORT, () => {
