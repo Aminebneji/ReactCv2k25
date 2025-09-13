@@ -11,7 +11,7 @@
     "build:backend": "npm --prefix backend run build",
     "build:copy-frontend": "cp -r frontend/build backend/build",
     "build": "npm run build:frontend && npm run build:copy-frontend && npm run build:backend",
-    "start": "npm --prefix backend start"
+    "start": "npm --prefix backend start && npm --prefix frontend start"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.0.0",

@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../assets/styles/contact.css';
 
 
 
 
 const ContactForm = () => {
-    const [formData, setFormData] = useState({name: '', email: '', message: ''});
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [isFormValid, setFormValid] = useState(false);
     const [isSubmitting, setSubmitting] = useState(false);
     const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
@@ -18,8 +18,8 @@ const ContactForm = () => {
     };
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const {name, value} = event.target;
-        setFormData((prevData) => ({...prevData, [name]: value}));
+        const { name, value } = event.target;
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
 
         setFormValid(
             formData.name.trim() !== '' &&
@@ -39,6 +39,15 @@ const ContactForm = () => {
         return true;
     };
 
+    const statusMessages: Record<number, string> = {
+        202: 'Votre message est en cours d’envoi. Vous pouvez quitter la page.',
+        200: 'Votre message a été envoyé avec succès.',
+        429: 'Encore trop de messages, désolé.',
+        400: 'Les champs sont invalides ou l’email est incorrect.',
+        500: 'Une erreur est survenue côté serveur. Veuillez réessayer plus tard.',
+    };
+
+
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
@@ -57,32 +66,28 @@ const ContactForm = () => {
         try {
             const response: Response = await fetch(`${process.env.REACT_APP_API_URL}`, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,
-                    message: formData.message,
-                }),
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
             });
 
-            if (response.ok) {
-                setFeedbackMessage('Votre message a été envoyé avec succès.');
+            const message =
+                statusMessages[response.status] ||
+                (response.ok
+                    ? 'Votre message a été envoyé avec succès.'
+                    : (await response.json()).error || 'Une erreur est survenue.');
+
+            setFeedbackMessage(message);
+
+            if (response.status === 200 || response.status === 202) {
                 localStorage.setItem('lastSubmission', Date.now().toString());
-            } else if (response.status === 429) {
-                setFeedbackMessage("encore trop de messages, désolé");
-            } else {
-                const errorData = await response.json();
-                setFeedbackMessage(errorData.error || 'Une erreur est survenue.');
             }
         } catch (error) {
             console.error('Erreur lors de l’envoi du formulaire:', error);
-            setFeedbackMessage('Une erreur est survenue.');
+            setFeedbackMessage(statusMessages[500]);
         } finally {
             setTimeout(() => {
                 setSubmitting(false);
-                setFormData({name: '', email: '', message: ''});
+                setFormData({ name: '', email: '', message: '' });
             }, 2000);
         }
     };
