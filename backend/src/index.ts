@@ -76,6 +76,7 @@ app.get('/', (req, res) => {
 // Route mailer
 app.post('/api/send-email', limiter, async (req, res) => {
     const { name, email, message } = req.body;
+
     if (!validateFields(name, email, message)) {
         return res.status(400).json({ error: 'Les champs sont invalides.' });
     }
@@ -89,11 +90,13 @@ app.post('/api/send-email', limiter, async (req, res) => {
     const sanitizedEmail: string = validator.normalizeEmail(email) || '';
     const sanitizedMessage: string = validator.escape(message);
 
-    res.status(202).json({ message: 'Votre message est en cours d\'envoi.' });
+    res.status(202).json({ message: 'Votre message est en cours d\'envoi. Vous pouvez quitter la page.' });
 
-    sendEmail(sanitizedName, sanitizedEmail, sanitizedMessage)
-        .then(() => console.log('✅ Email envoyé avec succès'))
-        .catch((error) => console.error('❌ Erreur lors de l’envoi de l’e-mail:', error));
+    setImmediate(() => {
+        sendEmail(sanitizedName, sanitizedEmail, sanitizedMessage)
+            .then(() => console.log('✅ Email envoyé avec succès'))
+            .catch((error) => console.error('❌ Erreur lors de l’envoi de l’e-mail:', error));
+    });
 });
 
 app.listen(PORT, () => {
