@@ -353,6 +353,72 @@ main {
 .navbar-link:hover, .navbar-link:focus { color: var(--light-gray70); }
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+button,
+.form-btn {
+    position: relative;
+    width: auto;
+    background: var(--border-gradient-onyx);
+    color: var(--orange-yellow-crayola);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: 14px;
+    font-size: var(--fs6);
+    font-weight: var(--fw400);
+    text-transform: capitalize;
+    box-shadow: var(--shadow3);
+    z-index: 1;
+    transition: var(--transition1);
+    cursor: pointer;
+}
+
+button::before,
+.form-btn::before {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+    transition: var(--transition1);
+}
+
+button:hover,
+.form-btn:hover {
+    background: var(--bg-gradient-yellow1);
+}
+
+button:hover::before,
+.form-btn:hover::before {
+    background: var(--bg-gradient-yellow2);
+}
+
+button:disabled,
+.form-btn:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
+button:disabled:hover,
+.form-btn:disabled:hover {
+    background: var(--border-gradient-onyx);
+}
+
+button:disabled:hover::before,
+.form-btn:disabled:hover::before {
+    background: var(--bg-gradient-jet);
+}
+
+.feedback-message {
+    color: var(--orange-yellow-crayola);
+    font-size: var(--fs6);
+    font-weight: var(--fw400);
+    margin-top: 10px;
+    text-align: center;
+}
+
 /*MEDIA QUERIES*/
 
 @media (min-width: 580px) {
@@ -529,6 +595,7 @@ main {
     .main-content {
         min-width: 75%;
         width: 75%;
+        height: fit-content;
         margin: 0;
     }
 

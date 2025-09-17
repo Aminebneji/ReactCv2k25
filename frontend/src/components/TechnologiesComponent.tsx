@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "../assets/styles/techno.css";
 
 interface Technology {
@@ -12,17 +12,17 @@ interface TechnologiesProps {
     technologies: Technology[];
 }
 
-const Technologies: React.FC<TechnologiesProps> = ({technologies}) => {
+const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
     const [modalActive, setModalActive] = useState(false);
     const [selectedTechnology, setSelectedTechnology] = useState<Technology | null>(null);
 
-    const MAX_DESCRIPTION_LENGTH = 35;
+    // const MAX_DESCRIPTION_LENGTH = 35;
 
-    const truncateDescription = (description: string) => {
-        return description.length > MAX_DESCRIPTION_LENGTH
-            ? description.substring(0, MAX_DESCRIPTION_LENGTH) + "..."
-            : description;
-    };
+    // const truncateDescription = (description: string) => {
+    //     return description.length > MAX_DESCRIPTION_LENGTH
+    //         ? description.substring(0, MAX_DESCRIPTION_LENGTH) + "..."
+    //         : description;
+    // };
 
     const openModal = (technology: Technology) => {
         setSelectedTechnology(technology);
@@ -50,7 +50,7 @@ const Technologies: React.FC<TechnologiesProps> = ({technologies}) => {
 
     return (
         <section className="technologies">
-            <h3 className="h3 technologies-title">Technologies</h3>
+            <h3 className="h3 article-title">Technologies</h3>
 
             <ul className="technologies-list has-scrollbar">
                 {technologies.map((technology) => (
@@ -63,19 +63,12 @@ const Technologies: React.FC<TechnologiesProps> = ({technologies}) => {
                             aria-label={`View details about ${technology.name}`}
                         >
                             <figure className="technologies-icon-box">
-                                <h4 className="h4 technologies-item-title">
-                                    {technology.name}
-                                </h4>
                                 <img
                                     src={technology.icon}
                                     alt={`Icon representing ${technology.name}`}
                                     loading="lazy"
                                 />
                             </figure>
-
-                            <div className="technologies-text">
-                                <p>{truncateDescription(technology.description)}</p>
-                            </div>
                         </div>
                     </li>
                 ))}

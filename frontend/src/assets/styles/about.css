@@ -36,6 +36,12 @@
     border-radius: 3px;
 }
 
+.cv-download{
+    padding-top: 5%;
+    place-items: center;;
+
+}
+
 @media (min-width: 580px) {
     .about .article-title { margin-bottom: 20px; }
     .about-text { margin-bottom: 40px; }
@@ -48,7 +54,9 @@
         width: 40px;
         height: 5px;
     }
+
 }
+
 @media (min-width: 768px) {
     .article-title { padding-bottom: 20px; }
 }
