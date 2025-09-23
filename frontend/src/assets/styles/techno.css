@@ -8,13 +8,33 @@
 }
 
 .technologies-list {
-    display: flex;
-    gap: 15px;
-    margin: 0 -15px;
-    padding: 25px 15px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: inline mandatory;
+  display: flex;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  overflow-x: auto;
+  scroll-behavior:smooth;
+  scroll-snap-type: inline mandatory;
+  cursor: grab;
+}
+
+.technologies-list::-webkit-scrollbar {
+  height: 12px; 
+}
+
+.technologies-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.technologies-list::-webkit-scrollbar-thumb {
+  background-color: var(--orange-yellow-crayola);
+  border-radius: 8px;
+}
+
+
+.technologies-list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange-yellow-crayola) transparent;
 }
 
 .technologies-item {
@@ -78,14 +98,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center;    
     z-index: 20;
     pointer-events: none;
     visibility: hidden;
-    transition: var(--transition1);
 }
 
 .modal-container.active {
@@ -111,6 +130,8 @@
     border-radius: 14px;
     box-shadow: var(--shadow5);
     z-index: 2;
+    max-width: 600px;
+    width: 90%;
 }
 
 .modal-close-btn {
@@ -128,32 +149,41 @@
     cursor: pointer;
 }
 
+
 .modal-icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 5%;
 }
 
 .modal-title {
     margin-bottom: 10px;
     text-align: center;
     color: white;
+    margin-bottom: 10%;
 }
 
 .modal-content {
     color: var(--light-gray);
-    font-size: var(--fs6);
+    font-size: var(--fs4);
     text-align: center;
     line-height: 1.6;
+    margin-bottom: 5%;
 }
 
 @media (min-width: 580px) {
     .modal-container {padding: 20px; }
-    .content-card {
-    }
+
         .technologies-icon-box img{
         height: 5vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-content{
+        font-size: var(--fs7);
+
     }
 }
 
@@ -164,5 +194,26 @@
     .technologies-icon-box img{
         height: 5vh;
     }
+}
+
+@media (min-width: 2560px) {
+.technologies-modal {
+    max-width: 1500px;
+    width: 90%;
+}
+
+.modal-title {
+    font-size: var(--fs1);
+    margin-bottom: 5%;
+}
+
+.modal-content {
+    color: var(--light-gray);
+    font-size: var(--fs2);
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 5%;
+}
+
 }
 

@@ -90,7 +90,7 @@ app.post('/api/send-email', limiter, async (req, res) => {
     const sanitizedEmail: string = validator.normalizeEmail(email) || '';
     const sanitizedMessage: string = validator.escape(message);
 
-    res.status(202).json({ message: 'Votre message est en cours d\'envoi. Vous pouvez quitter la page.' });
+    res.status(202).json({ message: 'Votre message est en cours d\'envoi.' });
 
     setImmediate(() => {
         sendEmail(sanitizedName, sanitizedEmail, sanitizedMessage)
