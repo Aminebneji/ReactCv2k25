@@ -40,7 +40,7 @@ const ContactForm = () => {
     };
 
     const statusMessages: Record<number, string> = {
-        202: 'Votre message est en cours d’envoi. Vous pouvez quitter la page.',
+        202: 'Votre message est en cours d’envoi.',
         200: 'Votre message a été envoyé avec succès.',
         429: 'Encore trop de messages, désolé.',
         400: 'Les champs sont invalides ou l’email est incorrect.',

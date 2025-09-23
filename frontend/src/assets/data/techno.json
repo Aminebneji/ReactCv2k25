@@ -3,72 +3,72 @@
     "id": 1,
     "name": "Node.js",
     "icon": "/img/nodejs.svg",
-    "description": "En utilisant des langages comme TypeScript ou des frameworks comme Angular, j'ai découvert l'écosystème Node.js. Au-delà d'être un moteur d'exécution, j'ai pu explorer des outils comme NPM, les standards de développement liés à ECMAScript et des outils comme les linters. Node.js m'a permis de mieux comprendre l'importance de l'environnement de développement au-delà du code."
+    "description": "Avec Node.js, j’ai développé des APIs backend et des scripts d’automatisation. J’ai travaillé avec des frameworks comme NestJS et Express, ce qui m’a permis de structurer des projets modulaires et maintenables. J’ai utilisé NPM pour gérer les dépendances et intégré des outils comme ESLint et Prettier pour assurer une qualité de code homogène dans l’équipe."
   },
   {
     "id": 2,
     "name": "TypeScript",
     "icon": "/img/typescript.svg",
-    "description": "J'ai rapidement adopté TypeScript dès mes débuts en développement. Ayant commencé avec des langages comme C#, le typage strict m'était familier. Des frameworks comme Angular m'ont permis de pratiquer TypeScript régulièrement et de m'y habituer."
+    "description": "J’utilise TypeScript pour sécuriser et clarifier le code dans des projets Angular et React. J’ai défini des interfaces et types personnalisés, utilisé les generics et mis en place des configurations strictes pour réduire les erreurs runtime et améliorer la lisibilité du code ainsi que sa robustesse."
   },
   {
     "id": 3,
     "name": "PHP",
     "icon": "/img/php.svg",
-    "description": "Je n'avais jamais travaillé avec PHP avant d'entrer chez Groupe Cerise. La majorité des sites de l'entreprise étaient construits avec un framework PHP. Pendant deux ans, j'ai analysé, créé et corrigé du code PHP. J'ai également créé un site e-commerce avec Symfony pour mon titre de Développeur Web et Web Mobile."
+    "description": "Chez Groupe Cerise, j’ai travaillé pendant deux ans sur des applications PHP, en corrigeant et développant des fonctionnalités sur des projets en production. J’ai également conçu un site e-commerce avec Symfony, ce qui m’a permis de pratiquer la création de routes, la gestion de formulaires, la gestion de session via des tokens utilisateurs, la sécurité et l’intégration avec MySQL."
   },
   {
     "id": 4,
     "name": "MySQL",
     "icon": "/img/mysql.svg",
-    "description": "J'ai souvent utilisé des ORM pour manipuler des bases de données relationnelles, mais je sais écrire des requêtes SQL à la main et concevoir des schémas de bases de données. Je maîtrise les concepts de conception relationnelle et l'optimisation des requêtes."
+    "description": "Avec MySQL, j’ai conçu des schémas relationnels optimisés et écrit des requêtes SQL complexes (jointures, agrégations) pour répondre à des besoins métiers. J’ai aussi utilisé des ORM comme Doctrine et TypeORM, et participé à la migration de bases en production pour améliorer les performances."
   },
   {
     "id": 5,
     "name": "MongoDB",
     "icon": "/img/mongodb.svg",
-    "description": "Je n'avais jamais utilisé de bases de données non relationnelles avant de travailler dans un environnement professionnel. Avec MongoDB, j'ai découvert une manière différente de structurer et de manipuler les données, particulièrement utile pour des applications flexibles et scalables."
+    "description": "J’ai utilisé MongoDB dans le développement d'applications où les modèles de données sont amenés à évoluer. J'ai alors découvert une manière différente de structurer et de manipuler les données, particulièrement utile pour des applications flexibles et scalables."
   },
   {
     "id": 6,
     "name": "Nest",
     "icon": "/img/nest.svg",
-    "description": "Pour l'entreprise Digital Prisma Player, j'ai développé une API avec Nest. Cela m'a permis de découvrir le développement backend avec Node.js, en combinant des concepts de programmation orientée objet et des outils modernes."
+    "description": "J’ai développé une API REST avec Nest, en exploitant son approche modulaire et orientée objet. J’ai intégré des middlewares, géré l’authentification et mis en place une architecture claire, ce qui a facilité la maintenance et l’évolution du projet."
   },
   {
     "id": 7,
     "name": "React",
     "icon": "/img/react.svg",
-    "description": "J'ai découvert React lors d'un projet chez GroupeCerise où j'assistais un senior développeur frontend pour la typage TypeScript. Ensuite, j'ai développé l'interface d'un projet 'Article Sourcing' pour Digital Prisma Players. Ce site, d'ailleurs, est réalisé principalement avec React."
+    "description": "Avec React, j’ai développé des interfaces dynamiques pour plusieurs projets, dont un outil interne de sourcing d’articles. J’ai utilisé les hooks pour gérer les états et effets, typé les composants avec TypeScript et optimisé le rendu grâce à une gestion fine du cycle de vie. Ce portfolio est d'ailleurs fait avec React et Material-Ui"
   },
   {
     "id": 8,
     "name": "Angular",
     "icon": "/img/angular.svg",
-    "description": "Lors d'une formation (POEI), j'ai utilisé Angular avec TypeScript avant même de maîtriser complètement JavaScript. Plus tard, chez GroupeCerise, j'ai travaillé sur la mise à jour et la maintenance d'applications Angular, en passant de la version 12 à la version 17. Cela m'a aussi permis de corriger des configurations EsLint mal implémentées et de renforcer la sécurité et la lisibilité du code."
+    "description": "J’ai travaillé sur la maintenance et la mise à jour d’applications Angular, en migrant du code de la version 12 à la 17. J’ai corrigé des configurations ESLint, renforcé la sécurité du code et amélioré la lisibilité. J’ai également développé des modules Angular avec une architecture claire et maintenable."
   },
   {
     "id": 9,
     "name": "Git et CI/CD",
     "icon": "/img/git.svg",
-    "description": "J'ai utilisé Git dès mes débuts pour versionner mon code et collaborer sur des projets. En entreprise, j'ai exploré les pipelines CI/CD avec des fichiers YAML pour assurer des déploiements standards et automatisés, en incluant des tests et des vérifications."
+    "description": "J’utilise Git au quotidien pour répartir mon travail en fonction de son état d'avancement et avoir une vision claire sur mon travail et ce qu'il me reste a faire. En entreprise, j’ai utilisé des pipelines CI/CD (via YAML) pour automatiser les tests, les vérifications de code et les déploiements, ce qui a réduit les erreurs manuelles et accéléré les livraisons."
   },
   {
     "id": 10,
     "name": "Docker",
     "icon": "/img/docker.svg",
-    "description": "J'ai découvert Docker en entreprise, où il a simplifié l'installation des projets sur différents environnements de développement. J'ai également utilisé Docker pour des projets personnels, standardisant les configurations et réduisant les problèmes liés aux dépendances."
+    "description": "Avec Docker, j’ai standardisé les environnements de développement et simplifié le déploiement de projets. J’ai créé des images et des docker-compose pour gérer des services multiples (API, bases de données) et éviter les problèmes de dépendances entre machines."
   },
   {
     "id": 11,
     "name": "Google Tag Manager",
     "icon": "/img/gtm.svg",
-    "description": "Pour les sites de GroupeCerise, j'ai utilisé Google Tag Manager pour intégrer des flux RSS de podcasts via des embeds conditionnés. Cela a permis de simplifier la gestion de certaines logiques et de réduire la charge sur le site principal."
-  } ,
+    "description": "J’ai utilisé Google Tag Manager pour intégrer des scripts et des flux externes sans surcharger le code source. Par exemple, chez Groupe Cerise, j’ai géré l’intégration de flux RSS de podcasts via des tags conditionnels, ce qui a simplifié la maintenance et réduit la charge côté serveur."
+  },
   {
     "id": 12,
     "name": "C#",
     "icon": "/img/cSharp.svg",
-    "description": "J'ai partiellement appris la programmation orientée objet avec C# sur le framework .NET. J'ai également exploré Unity de mon côté. Cela fait un moment que je n'ai pas pratiqué, mon niveau de connaissance sur cette technologie est alors probablement assez limité. Cependant, il est fort probable que je m'y remette un jour, d'autant plus que c'est un langage qui me plaît beaucoup."
+    "description": "Avec C# et .NET, j’ai pratiqué la programmation orientée objet et développé des projets académiques. J’ai aussi exploré Unity pour des applications interactives. Même si je l’ai moins utilisé récemment, mes bases solides me permettent de reprendre rapidement ce langage que j’apprécie."
   }
 ]

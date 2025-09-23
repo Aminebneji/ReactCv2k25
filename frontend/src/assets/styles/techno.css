@@ -8,13 +8,33 @@
 }
 
 .technologies-list {
-    display: flex;
-    gap: 15px;
-    margin: 0 -15px;
-    padding: 25px 15px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: inline mandatory;
+  display: flex;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  overflow-x: auto;
+  scroll-behavior:smooth;
+  scroll-snap-type: inline mandatory;
+  cursor: grab;
+}
+
+.technologies-list::-webkit-scrollbar {
+  height: 12px; 
+}
+
+.technologies-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.technologies-list::-webkit-scrollbar-thumb {
+  background-color: var(--orange-yellow-crayola);
+  border-radius: 8px;
+}
+
+
+.technologies-list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange-yellow-crayola) transparent;
 }
 
 .technologies-item {
@@ -76,8 +96,8 @@
 .modal-container {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 45;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -85,7 +105,6 @@
     z-index: 20;
     pointer-events: none;
     visibility: hidden;
-    transition: var(--transition1);
 }
 
 .modal-container.active {
@@ -150,8 +169,7 @@
 
 @media (min-width: 580px) {
     .modal-container {padding: 20px; }
-    .content-card {
-    }
+
         .technologies-icon-box img{
         height: 5vh;
     }
