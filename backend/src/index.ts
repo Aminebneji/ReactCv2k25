@@ -15,7 +15,9 @@ const PORT: string = process.env.PORT || '5000';
 app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
-//rate limiter
+app.set('trust proxy', 1);
+
+// rate limiter
 const limiter: RateLimitRequestHandler = rateLimit({
     windowMs: 2 * 60 * 60 * 1000, // 2 heures
     max: 10,
