@@ -11,10 +11,20 @@ dotenv.config();
 const app = express();
 const PORT: string = process.env.PORT || '5000';
 
+const allowedOrigins = [
+    'http://localhost:3000', // local
+    'https://amine-ben-neji-curriculum2k25.onrender.com' // prod
+];
+
 app.use(cors({
-    origin: 'http://localhost:3000',
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type']
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            const msg = 'CORS policy: origin non autorisée';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    }
 }));
 app.use(bodyParser.json());
 
