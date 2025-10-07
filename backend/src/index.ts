@@ -78,7 +78,7 @@ async function sendEmail(name: string, email: string, message: string): Promise<
                 Messages: [
                     {
                         From: {
-                            Email: process.env.SENDER_EMAIL,
+                            Email: process.env.EMAIL_USER,
                             Name: 'Portfolio',
                         },
                         To: [
