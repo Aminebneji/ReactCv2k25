@@ -5,14 +5,17 @@ import rateLimit, { RateLimitRequestHandler } from 'express-rate-limit';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import validator from 'validator';
-import SMTPTransport from "nodemailer/lib/smtp-transport";
 
 dotenv.config();
 
 const app = express();
 const PORT: string = process.env.PORT || '5000';
 
-app.use(cors({ origin: '*' }));
+app.use(cors({
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+}));
 app.use(bodyParser.json());
 
 app.set('trust proxy', 1);
@@ -45,29 +48,34 @@ async function checkEmailExists(email: string): Promise<boolean> {
 }
 
 // Envoi email
-async function sendEmail(
-    name: string,
-    email: string,
-    message: string
-): Promise<void> {
-    const transporter: nodemailer.Transporter<SMTPTransport.SentMessageInfo, SMTPTransport.Options> = nodemailer.createTransport({
-        service: 'gmail',
+async function sendEmail(name: string, email: string, message: string): Promise<void> {
+    const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST,
+        port: Number(process.env.SMTP_PORT) || 587,
+        secure: false,
         auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS,
         },
+        logger: true,
+        debug: true,
     });
 
     const mailOptions = {
-        from: process.env.EMAIL_USER || "",
-        to: process.env.RECEIVER_EMAIL || "",
-        replyTo: email || "false",
+        from: `"Portfolio Contact" <${process.env.SENDER_EMAIL}>`,
+        to: process.env.RECEIVER_EMAIL,
         subject: `Nouveau message de ${name}`,
-        text: `[ ${message} ] Recontacte par mail : ${email}`,
+        text: `[${message}] Recontacte par mail : ${email}`,
+        replyTo: email,
     };
-    console.log(name, email, message);
 
-    await transporter.sendMail(mailOptions);
+    try {
+        await transporter.sendMail(mailOptions);
+        console.log("✅ Email envoyé avec succès");
+    } catch (error) {
+        console.error("❌ Erreur lors de l’envoi:", error);
+        throw error;
+    }
 }
 
 // Route principale
