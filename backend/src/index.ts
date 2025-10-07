@@ -133,3 +133,5 @@ app.post('/api/send-email', limiter, async (req, res) => {
     });
 });
 
+
+app.listen(PORT, () => console.log(`Backend sur le port ${PORT}`));
