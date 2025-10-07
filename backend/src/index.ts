@@ -2,9 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import rateLimit, { RateLimitRequestHandler } from 'express-rate-limit';
-import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import validator from 'validator';
+import Mailjet from 'node-mailjet';
 
 dotenv.config();
 
@@ -57,36 +57,50 @@ async function checkEmailExists(email: string): Promise<boolean> {
     return validator.isEmail(email);
 }
 
-// Envoi email
+
+const smtpUser: string = process.env.SMTP_USER ?? '';
+const smtpPass: string = process.env.SMTP_PASS ?? '';
+
+if (!smtpUser || !smtpPass) {
+    throw new Error('SMTP_USER and SMTP_PASS environment variables must be defined');
+}
+
+const mailjet = Mailjet.apiConnect(
+    smtpUser,
+    smtpPass
+);
+
 async function sendEmail(name: string, email: string, message: string): Promise<void> {
-    const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port: Number(process.env.SMTP_PORT) || 587,
-        secure: false,
-        auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS,
-        },
-        logger: true,
-        debug: true,
-    });
-
-    const mailOptions = {
-        from: `"Portfolio Contact" <${process.env.SENDER_EMAIL}>`,
-        to: process.env.RECEIVER_EMAIL,
-        subject: `Nouveau message de ${name}`,
-        text: `[${message}] Recontacte par mail : ${email}`,
-        replyTo: email,
-    };
-
     try {
-        await transporter.sendMail(mailOptions);
-        console.log("✅ Email envoyé avec succès");
-    } catch (error) {
-        console.error("❌ Erreur lors de l’envoi:", error);
-        throw error;
+        const request = await mailjet
+            .post('send', { version: 'v3.1' })
+            .request({
+                Messages: [
+                    {
+                        From: {
+                            Email: process.env.SENDER_EMAIL,
+                            Name: 'Portfolio',
+                        },
+                        To: [
+                            {
+                                Email: process.env.RECEIVER_EMAIL,
+                            },
+                        ],
+                        Subject: `Nouveau message de ${name}`,
+                        TextPart: `[${message}] Recontacte par mail : ${email}`,
+                        ReplyTo: {
+                            Email: email,
+                        },
+                    },
+                ],
+            });
+        console.log('✅ Email envoyé avec succès via Mailjet');
+    } catch (err) {
+        console.error('❌ Erreur lors de l’envoi via Mailjet:', err);
+        throw err;
     }
 }
+
 
 // Route principale
 app.get('/', (req, res) => {
@@ -119,6 +133,3 @@ app.post('/api/send-email', limiter, async (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`Backend sur le port ${PORT}`);
-});

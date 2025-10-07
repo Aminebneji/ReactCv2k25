@@ -18,5 +18,8 @@
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.0.0",
     "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "node-mailjet": "^6.0.9"
   }
 }
