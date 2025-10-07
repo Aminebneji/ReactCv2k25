@@ -19,14 +19,16 @@ const ContactForm = () => {
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
-        setFormData((prevData) => ({ ...prevData, [name]: value }));
+        const updatedData = { ...formData, [name]: value };
+        setFormData(updatedData);
 
         setFormValid(
-            formData.name.trim() !== '' &&
-            validateEmail(formData.email) &&
-            formData.message.trim() !== ''
+            updatedData.name.trim() !== '' &&
+            validateEmail(updatedData.email) &&
+            updatedData.message.trim() !== ''
         );
     };
+
 
     // ici le but c'est de contraindre l'envoie d'un mail unique par utilisateur en utilisant le local storage
     const isSubmissionAllowed = (): boolean => {
@@ -39,20 +41,8 @@ const ContactForm = () => {
         return true;
     };
 
-    const statusMessages: Record<number, string> = {
-        202: 'Votre message est en cours d’envoi.',
-        200: 'Votre message a été envoyé avec succès.',
-        429: 'Encore trop de messages, désolé.',
-        400: 'Les champs sont invalides ou l’email est incorrect.',
-        500: 'Une erreur est survenue côté serveur. Veuillez réessayer plus tard.',
-    };
-
-
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
-        // je vérifie la présence dans le local storage d'une éventuelle
-        // trace d'une requête, si c'est le cas je return sinon j'initie l'envoie du message par mail
 
         if (!isSubmissionAllowed()) {
             setFeedbackMessage('Vous envoyez trop de messages');
@@ -60,9 +50,8 @@ const ContactForm = () => {
         }
 
         setSubmitting(true);
-        setFeedbackMessage(null);
+        setFeedbackMessage('Votre message est en cours d’envoi...');
 
-        //call au backend pour le mail (avec nodemailer)
         try {
             const response: Response = await fetch(`${process.env.REACT_APP_API_URL}`, {
                 method: 'POST',
@@ -70,27 +59,28 @@ const ContactForm = () => {
                 body: JSON.stringify(formData),
             });
 
-            const message =
-                statusMessages[response.status] ||
-                (response.ok
-                    ? 'Votre message a été envoyé avec succès.'
-                    : (await response.json()).error || 'Une erreur est survenue.');
+            if (response.status === 202 || response.status === 200) {
+                setFeedbackMessage('Votre message est en cours d’envoi...');
 
-            setFeedbackMessage(message);
-
-            if (response.status === 200 || response.status === 202) {
-                localStorage.setItem('lastSubmission', Date.now().toString());
+                setTimeout(() => {
+                    setFeedbackMessage('Message envoyé avec succès ✅');
+                    localStorage.setItem('lastSubmission', Date.now().toString());
+                }, 1500);
+            } else {
+                const data = await response.json();
+                setFeedbackMessage(data.error || 'Une erreur est survenue.');
             }
         } catch (error) {
             console.error('Erreur lors de l’envoi du formulaire:', error);
-            setFeedbackMessage(statusMessages[500]);
+            setFeedbackMessage('Une erreur est survenue côté serveur.');
         } finally {
             setTimeout(() => {
                 setSubmitting(false);
                 setFormData({ name: '', email: '', message: '' });
-            }, 2000);
+            }, 2500);
         }
     };
+
 
 
     return (
