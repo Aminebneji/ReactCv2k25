@@ -75,4 +75,4 @@ Le frontend sera accessible sur `http://localhost:3000` et le backend sur `http:
 
 ---
 
-## Créé avec ❤️
+## Créé avec ✋ 
