@@ -49,7 +49,7 @@ const Navigation = () => {
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="/ReactCv2k25">
             <main className="main">
                 <SidebarComponent />
                 <Navigation />
