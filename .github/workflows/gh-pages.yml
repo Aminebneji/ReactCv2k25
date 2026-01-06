@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - prod
+      - ghpage
 
 permissions:
   contents: write
@@ -35,3 +35,5 @@ jobs:
           folder: build
           branch: ghpage
           clean: true
+          clean-exclude: |
+            .nojekyll
