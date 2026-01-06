@@ -1,6 +1,5 @@
-import React from "react";
 import "../src/assets/styles/main.css";
-import {BrowserRouter as Router, Link, Route, Routes, useLocation} from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes, useLocation } from "react-router-dom";
 import SidebarComponent from "./components/SidebarComponent";
 import AboutComponent from "./components/AboutComponent";
 import TimelineComponent from "./components/TimelineComponent";
@@ -52,17 +51,17 @@ const App = () => {
     return (
         <Router>
             <main className="main">
-                <SidebarComponent/>
-                <Navigation/>
+                <SidebarComponent />
+                <Navigation />
                 <div
                     className="main-content"
                     role="main"
                     aria-label="Contenu principal"
                 >
                     <Routes>
-                        <Route path="/" element={<AboutComponent/>}/>
-                        <Route path="/timeline" element={<TimelineComponent/>}/>
-                        <Route path="/contact" element={<ContactForm/>}/>
+                        <Route path="/" element={<AboutComponent />} />
+                        <Route path="/timeline" element={<TimelineComponent />} />
+                        <Route path="/contact" element={<ContactForm />} />
                     </Routes>
                 </div>
             </main>
