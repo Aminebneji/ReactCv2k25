@@ -9,7 +9,7 @@ const About = () => {
 
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "/CV.pdf";
+        link.href = process.env.PUBLIC_URL + "/CV.pdf";
         link.download = "CV.pdf";
         link.click();
 

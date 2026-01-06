@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "../assets/styles/timeline.css";
 import timelineData from "../assets/data/timeline.json";
 import techData from "../assets/data/techno.json";
@@ -36,7 +36,7 @@ const Timeline: React.FC = () => {
             });
         };
 
-        window.addEventListener("scroll", handleScroll, {passive: true});
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
@@ -45,19 +45,17 @@ const Timeline: React.FC = () => {
         <article>
             <h2 className="h2 article-title">Parcours</h2>
             <div className="timeline">
-                <div className="timeline__vertical-line"/>
+                <div className="timeline__vertical-line" />
 
                 {timelineData.map((item: TimelineItem, index: number) => (
                     <div
                         key={index}
-                        className={`timeline__item ${
-                            activeIndex === index ? "timeline__item--active" : ""
-                        }`}
+                        className={`timeline__item ${activeIndex === index ? "timeline__item--active" : ""
+                            }`}
                     >
                         <div
-                            className={`timeline__marker ${
-                                activeIndex === index ? "timeline__marker--active" : ""
-                            }`}
+                            className={`timeline__marker ${activeIndex === index ? "timeline__marker--active" : ""
+                                }`}
                         >
                             <span className="timeline__marker-date">{item.date}</span>
                         </div>
@@ -65,7 +63,7 @@ const Timeline: React.FC = () => {
                             <div className="timeline__info">
                                 <img
                                     className="timeline__img"
-                                    src={item.image}
+                                    src={process.env.PUBLIC_URL + item.image}
                                     alt={item.title}
                                     style={{
                                         maxWidth: "100px",
@@ -94,9 +92,9 @@ const Timeline: React.FC = () => {
                                         const tech = techData.find((tech) => tech.id === techId);
                                         return tech ? (
                                             <div key={tech.id} className="timeline__tech-item"
-                                                 style={{textAlign: "center"}}>
+                                                style={{ textAlign: "center" }}>
                                                 <img
-                                                    src={tech.icon}
+                                                    src={process.env.PUBLIC_URL + tech.icon}
                                                     alt={tech.name}
                                                     title={tech.name}
                                                     className="timeline__tech-icon"

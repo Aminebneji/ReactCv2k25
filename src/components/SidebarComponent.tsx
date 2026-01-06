@@ -21,7 +21,7 @@ const SidebarComponent: React.FC = () => {
             <div className="sidebar-info">
                 <figure className="avatar-box">
                     <img
-                        src="/img/avatar.png"
+                        src={process.env.PUBLIC_URL + "/img/avatar.png"}
                         alt="avatar d'Amine Benneji"
                         width={80}
                     />

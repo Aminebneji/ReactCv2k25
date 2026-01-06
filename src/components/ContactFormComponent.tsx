@@ -76,7 +76,7 @@ const ContactForm = () => {
 
         } catch (error) {
             console.error('Erreur lors de l’envoi du formulaire:', error);
-            setFeedbackMessage('Une erreur est survenue lors de l\'envoi (EmailJS).');
+            setFeedbackMessage('Une erreur est survenue lors de l\'envoi.');
         } finally {
             setTimeout(() => {
                 setSubmitting(false);

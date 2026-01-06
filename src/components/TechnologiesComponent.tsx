@@ -77,7 +77,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
             >
               <figure className="technologies-icon-box">
                 <img
-                  src={technology.icon}
+                  src={process.env.PUBLIC_URL + technology.icon}
                   alt={`Icon representing ${technology.name}`}
                   loading="lazy"
                 />
@@ -105,7 +105,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
             </button>
             <div className="modal-icon-box">
               <img
-                src={selectedTechnology.icon}
+                src={process.env.PUBLIC_URL + selectedTechnology.icon}
                 alt={`Icon representing ${selectedTechnology.name}`}
                 width="80"
               />
