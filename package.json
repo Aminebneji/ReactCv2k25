@@ -1,7 +1,7 @@
 {
-  "name": "react-portfolio-frontend",
+  "name": "reactcv2k25",
+  "homepage": "https://aminebneji.github.io/ReactCv2k25",
   "version": "1.0.0",
-  "homepage": "https://Aminebneji.github.io/ReactCv2k25/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
