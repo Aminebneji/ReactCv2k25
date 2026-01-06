@@ -33,7 +33,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
-          branch: gh-pages
+          branch: ghpages
           clean: true
           clean-exclude: |
             .nojekyll
