@@ -70,5 +70,11 @@
     "name": "C#",
     "icon": "/img/cSharp.svg",
     "description": "Avec C# et .NET, j’ai pratiqué la programmation orientée objet et développé des projets académiques. J’ai aussi exploré Unity pour des applications interactives. Même si je l’ai moins utilisé récemment, mes bases solides me permettent de reprendre rapidement ce langage que j’apprécie."
+  },
+  {
+    "id": 13,
+    "name": "Next.js",
+    "icon": "/img/nextjs.svg",
+    "description": "Avec Next.js, j’ai développé des applications Web avec une architecture claire et maintenable. J’ai utilisé les hooks pour gérer les états et effets, typé les composants avec TypeScript et optimisé le rendu grâce à une gestion fine du cycle de vie."
   }
 ]
