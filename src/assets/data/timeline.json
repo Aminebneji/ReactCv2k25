@@ -1,5 +1,19 @@
 [
   {
+      "date": "2026 ",
+    "image": "/img/bdicon.png",
+    "title": "Feebdack",
+    "description": "Feebdack est un outil Web développée avec Next.js, c'est d'un côté un widget intégré sur un site web qui permet de récolter des avis utilisateurs et d'un autre côté une application web qui permet de gérer ces derniers.Feebdack est d'ailleurs intégré sur ce site web :)",
+    "technologies": [1,2,4,9,13]
+},
+{
+      "date": "2026 ",
+    "image": "/img/RICLOGO.png",
+    "title": "Read it Clean",
+    "description": "Read It Clean est une application Web développée avec Next.js, c'est un site de presse qui vise à simplifier la lecture des articles de news. La donnée est récupérée via des flux RSS et traitée par une IA générative. Les articles sont ensuite affichés de manière claire et concise.",
+    "technologies": [1,2,4,9,13]
+},
+  {
     "date": "Diplôme",
     "image": "/img/diplôme.png",
     "title": "Concepteur Développeur d'Applications",
