@@ -3,6 +3,7 @@
 
 Ce dépôt contient le code source de mon portfolio personnel, développé avec **React** et **EmailJS**, le tout est hébergé sur GitHub Pages. 
 
+@TODO : INTEGRER UN LIEN POUR FB ET RIC + ICONES CLAUD IA 
 ---
 
 ## Aperçu
