@@ -4,6 +4,7 @@
     "image": "/img/bdicon.png",
     "title": "Feebdack",
     "description": "Feebdack est un outil Web développée avec Next.js, c'est d'un côté un widget intégré sur un site web qui permet de récolter des avis utilisateurs et d'un autre côté une application web qui permet de gérer ces derniers.Feebdack est d'ailleurs intégré sur ce site web :)",
+    "link":"https://feebdack-phi.vercel.app/",
     "technologies": [1,2,4,9,13]
 },
 {
@@ -11,6 +12,7 @@
     "image": "/img/RICLOGO.png",
     "title": "Read it Clean",
     "description": "Read It Clean est une application Web développée avec Next.js, c'est un site de presse qui vise à simplifier la lecture des articles de news. La donnée est récupérée via des flux RSS et traitée par une IA générative. Les articles sont ensuite affichés de manière claire et concise.",
+    "link":"https://read-it-clean.vercel.app/",
     "technologies": [1,2,4,9,13]
 },
   {
@@ -25,33 +27,14 @@
     "image": "/img/dpp.png",
     "title": "M6 Digital Services - Digital Prisma Player",
     "description": "Après la fermeture du pôle informatique du Groupe Cerise et la reprise des projets par Digital Prisma Player, j'ai poursuivi mes tâches tout en découvrant de nouveaux projets et infrastructures.",
-    "technologies": [
-      1,
-      2,
-      4,
-      6,
-      7,
-      5,
-      9,
-      10,
-      11
-    ]
+    "technologies": [1,2,4,6,7,5,9,10,11]
   },
   {
     "date": "Projet",
     "image": "/img/articleSourcing.png",
     "title": "Article Sourcing",
     "description": "Pour l'entreprise Digital Prisma Player, j'ai développé une application Web avec Nest.js et React. Elle permettait de récupérer des données via des flux RSS et de générer des articles grâce à une IA générative. Cette application avait pour objectif d'augmenter la productivité des rédacteurs de l'entreprise. J'ai présenté ce projet lors d'une soutenance, qui m'a permis d'obtenir mon diplôme de Concepteur Développeur d'Applications.",
-    "link": "",
-    "technologies": [
-      1,
-      2,
-      4,
-      6,
-      7,
-      9,
-      10
-    ]
+    "technologies": [1,2,4,6,7,9,10]
   },
   {
     "date": "Diplôme",
@@ -65,27 +48,14 @@
     "image": "/img/cerise.png",
     "title": "Groupe Cerise",
     "description": "Mes débuts en tant que Développeur m'ont permis de découvrir et d'appréhender ce métier. J'ai assuré la maintenance et le développement de fonctionnalités pour les sites et webservices de l'entreprise, mené des études techniques et documenté les projets pour orienter les développements futurs. Le tout s'est déroulé dans un cadre Scrum, avec une stack technique principalement en PHP (sites principaux), MongoDB, GoogleTagManager, ainsi que des projets en Angular et Node.js avec Webpack. Nous utilisions également des outils comme GitLab, Harbord, Verdaccio et Docker. Cette expérience enrichissante a renforcé mes compétences et confirmé ma passion pour ce métier.",
-    "technologies": [
-      1,
-      2,
-      3,
-      5,
-      8,
-      9,
-      10,
-      11
-    ]
+    "technologies": [1,2,3,5,8,9,10,11]
   },
   {
     "date": "Projet",
     "image": "/img/shoesRar.png",
     "title": "Shoes.Rar",
     "description": "Un site e-commerce développé avec Symfony, documenté et présenté lors d'une soutenance pour obtenir mon diplôme de Développeur Web et Web Mobile.",
-    "link": "https://github.com/Aminebneji/Shoes.RAR",
-    "technologies": [
-      3,
-      4
-    ]
+    "technologies": [3,4]
   },
   {
     "date": "10/2022 - 02/2022",
@@ -99,14 +69,7 @@
     "image": "/img/filRougeAston.png",
     "title": "Gamin' Home",
     "description": "Une application Web construite avec Angular et C# .NET, représentant le site d'un cybercafé imaginaire.",
-    "link": "https://github.com/Aminebneji/cyber_april",
-    "technologies": [
-      1,
-      2,
-      12,
-      8,
-      9
-    ]
+    "technologies": [1,2,12,8,9]
   },
   {
     "date": "01/2022 - 04/2022",
@@ -127,12 +90,7 @@
     "image": "/img/JDRsimplon.jpg",
     "title": "JdR Simplon",
     "description": "Une application Web développée en HTML, CSS et JavaScript natif, permettant à l'utilisateur de décider de l'évolution d'une histoire en choisissant parmi plusieurs options à chaque événement.",
-    "link": "https://github.com/Aminebneji/jdr-simplon",
-    "technologies": [
-      1,
-      2,
-      9
-    ]
+    "technologies": [1,2,9]
   },
   {
     "date": "04/2022 - 10/2022",
