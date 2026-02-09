@@ -76,5 +76,11 @@
     "name": "Next.js",
     "icon": "/img/nextjs.svg",
     "description": "Avec Next.js, j’ai développé des applications Web avec une architecture claire et maintenable. J’ai utilisé les hooks pour gérer les états et effets, typé les composants avec TypeScript et optimisé le rendu grâce à une gestion fine du cycle de vie."
+  },
+  {
+    "id": 14,
+    "name": "Pisma db",
+    "icon": "/img/prisma.png",
+    "description": "Avec Prisma DB, j’ai conçu et géré la couche de données de mes applications comme Feebdack par exemple. J’y ai modélisé le schéma de la base de données, défini les relations entre entités. J’ai utilisé le client Prisma pour effectuer des requêtes typées et sécurisées, tout en facilitant les migrations et l’évolution du schéma de données au fil du projet. J'utilise maintenant Prisma Studio comme une solution claire et agréable pour gérer mes données."
   }
 ]

@@ -25,10 +25,10 @@ const About = () => {
             </header>
             <section className="about-text">
                 <p>
-                    Je suis un développeur qui aime apprendre et se dépasser en explorant des projets variés.
-                    Ce qui me motive, c’est de résoudre des problèmes, créer des solutions utiles et continuer à grandir dans ce que je fais.
+                    Je suis un développeur qui aime apprendre en explorant des projets variés.
+                    Ce qui me motive, c’est de résoudre des problèmes, créer des solutions utiles et continuer à grandir à travers ce que je fais.
                     Les projets que j’explore me rendent plus solide à chaque étape, et c’est précisément ça qui me passionne.
-                    Mon code aussi perfectible qu'il puisse être est disponible sur GitHub justement car je ne cherche ni a briller, ni à avoir raison, juste à évoluer.
+                    Mon objectif est de continuer à perfectionner mon experise en élargissant mes expériences.
                 </p>
             </section>
             <section className="techno">
